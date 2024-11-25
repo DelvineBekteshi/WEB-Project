@@ -191,3 +191,25 @@ min-width: 250px;
   color: #888;
   border-top: 1px solid #444;
 }
+/* Responsiviteti */
+@media(max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-container>div{
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+.footer p{
+  font-size: 0.9rem;
+}
+.footer-bottom{
+  font-size: 0.8rem;
+}
+}
