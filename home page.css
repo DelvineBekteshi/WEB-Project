@@ -2,6 +2,10 @@ a{
     text-decoration: none;
 }
 
+body{
+  background-color: rgba(240, 237, 215, 0.8);
+}
+
 header{
    background-color: #0C192C;
    padding: 5px 40px;
@@ -119,7 +123,7 @@ header{
 .part2 h2{
     font-size: 2rem;
     margin-bottom: 10px;
-    color: 5B697E;
+    color: #4D5A6C;
 }
 .part2 p{
     font-size: 1.2rem;
@@ -201,6 +205,23 @@ min-width: 250px;
       width: 100%;
       margin-bottom: 20px;
   }
+  .News{
+    flex-direction: column;
+  }
+
+  .newsCon{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .NewsTitle{
+    margin: 5px;
+  }
+
+  .NewsDesc{
+    margin: 5px;
+  }
 }
 @media (max-width: 480px) {
   .footer h3 {
@@ -212,4 +233,54 @@ min-width: 250px;
 .footer-bottom{
   font-size: 0.8rem;
 }
+
+.News{
+    flex-direction: column;
+  }
+
+
+}
+
+.part3{
+  width: 100%;
+  height: auto;
+}
+
+#part3Title{
+  color: #3E4755;
+}
+.News{
+  box-shadow: 0px 4 px 8px rgba(0, 0, 0, 0.3);
+  padding-bottom: 70px;
+  max-width: 100%;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.image{
+  width: 40%;
+  max-width: 95%;
+  height: 30%;
+  max-height: 75%;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.NewsTitle{
+  font-size: 22px;
+  color: 5B697E;
+  width: 100%;
+}
+
+.NewsDesc{
+  font-size: 20px;
+  color: #666;
+}
+
+.newsCon{
+  display: flex;
 }
