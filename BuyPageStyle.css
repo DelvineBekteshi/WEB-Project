@@ -1,0 +1,101 @@
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgba(240, 237, 215, 0.8);
+  }
+
+  header{
+    background-color: #0C192C;
+    padding: 5px 40px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+ }
+
+ .header0 {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin-right: 20px;
+    margin-left: 5px;
+ }
+ 
+ .icon{
+     height: 32px;
+     width: 32px;
+     border-radius: 80px;
+ }
+ 
+ .header1{
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding-inline: 3px;
+ }
+ 
+ .header2{
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: auto;
+    color: white;
+ }
+
+ .image-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: flex-start; /* Aligns content to the left */
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+  }
+
+    
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Adjust left margin for placement */
+    transform: translateY(-50%); /* Centers content vertically */
+    color: white;
+    text-align: left;
+  }
+
+  .overlay-content h1 {
+    font-size: clamp(2rem, 4vw, 4rem); /* Responsive font size */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+
+  #text1{
+    font-size: 22px;
+    color: #0C192C;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
