@@ -87,6 +87,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: 8px;
   }
   
   .cta-button:hover {
@@ -99,3 +100,208 @@ body{
     color: #0C192C;
     font-family: Georgia, 'Times New Roman', Times, serif;
  }
+
+#search{
+  border-radius: 15px;
+  background-color: rgba(245,245,245,255);
+  border: solid 1px;
+  width: 60%;
+  height: 35px;
+
+}
+
+input[type=search] {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 8px 4px; 
+  background-repeat: no-repeat;
+  background-size: 30px 25px;
+  padding: 12px 20px 12px 40px;
+  cursor: pointer;
+}
+
+#text2{
+  display: inline-flex;
+  font-size: 20px;
+}
+
+.house{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 80px;
+  max-width: 100%;
+  display: flex;
+  background-color: white;
+  margin: 15px
+}
+
+#house{
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  object-fit: cover;
+}
+
+.houseTitle{
+  color: black;
+  font-size: 21px;
+  margin: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.houseDesc{
+color: black;
+flex-wrap: wrap;
+margin: 10px;
+}
+
+.house{
+  position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.next{
+  position: absolute;
+  top: 23%;
+  right: 79.35%;
+  width: 30px;
+  height: 80px;
+  opacity: 60%;
+  background-color: rgb(94, 89, 89);
+  font-size: 20px;
+}
+
+.previous{
+  position: absolute;
+  top: 23%;
+  left: 1%;
+  width: 30px;
+  height: 80px;
+  opacity: 60%;
+  background-color: rgb(94, 89, 89);
+  font-size: 20px;
+}
+
+
+
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+  .overlay-content {
+    left: 3%;
+  }
+
+  .overlay-content h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .house{
+    padding-bottom: 50px;
+    display: flex;
+  }
+  #house{
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+  }
+  .houseTitle{
+    margin: 5px;
+  }
+  .houseDesc{
+    color: black;
+    flex-wrap: wrap;
+    margin: 5px;
+ }
+
+ #search{
+  width: 80%;
+ }
+
+ .header1{
+  font-size:13px;
+ }
+ .header2{
+  font-size:13px;
+  margin-left:5px;
+ }
+}
+
+.footer{
+  background-color: #0C192C;
+  color:white;
+  padding: 40px 20px;
+}
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+/* 3 kolona */
+.footer-container>div{
+width: 30%;
+min-width: 250px;
+}
+.footer h3{
+  font-size: 1.5rem;
+  margin-bottom:15px;
+  color:#f9f9f9;
+}
+.footer p{
+  font-size: 1rem;
+  color:#bbb;
+}
+.footer-links ul{
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li {
+  margin:8px 0
+}
+.footer-links ul li a{
+  color:#bbb;
+  text-decoration: none;
+}
+.footer-links ul li a:hover{
+  color: white;
+}
+.footer-socials.social-icons a{
+  display: inline-block;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+.footer-socials.social-icons img{
+  width: 100%;
+  height: auto;
+}
+.footer-bottom{
+  text-align: center;
+margin-top: 20px;
+padding-top: 10px;
+font-size: 0.9rem;
+color: #888;
+border-top: 1px solid #444;
+}
+
+@media (max-width: 480px) {
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+.footer p{
+  font-size: 0.9rem;
+}
+.footer-bottom{
+  font-size: 0.8rem;
+}
+}
