@@ -164,7 +164,7 @@ margin: 10px;
     align-items: center;
     overflow: hidden;
 }
-.next{
+#next{
   position: absolute;
   top: 23%;
   right: 79.35%;

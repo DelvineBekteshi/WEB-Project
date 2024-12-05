@@ -1,3 +1,52 @@
+a{
+    text-decoration: none;
+}
+
+body{
+  background-color: rgba(240, 237, 215, 0.8);
+
+}
+
+header{
+   background-color: #0C192C;
+   padding: 5px 40px;
+   color: white;
+   justify-content: space-between;
+   align-items: center;
+   display: flex;
+   
+}
+
+.header0 {
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   margin-right: 20px;
+   margin-left: 5px;
+}
+
+.icon{
+     
+    height: 32px;
+    width: 32px;
+    border-radius: 80px;
+}
+
+.header1{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   padding-inline: 3px;
+}
+
+.header2{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-left: auto;
+   color: white;
+}
+.image{
+    position: relative;
     display: flex;
     align-items: center; /* Centers content vertically */
     justify-content: flex-start; /* Aligns content to the left */
