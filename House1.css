@@ -1,0 +1,144 @@
+a{
+    text-decoration: none;
+}
+
+body{
+  background-color: rgba(240, 237, 215, 0.8);
+
+}
+
+header{
+   background-color: #0C192C;
+   padding: 5px 40px;
+   color: white;
+   justify-content: space-between;
+   align-items: center;
+   display: flex;
+   
+}
+
+.header0 {
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   margin-right: 20px;
+   margin-left: 5px;
+}
+
+.icon{
+     
+    height: 32px;
+    width: 32px;
+    border-radius: 80px;
+}
+
+.header1{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   padding-inline: 3px;
+}
+
+.header2{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-left: auto;
+   color: white;
+}
+.image{
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: flex-start; /* Aligns content to the left */
+    height: auto; /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
+  }
+ @media (max-width: 768px) {
+    .header1{
+        font-size:13px;
+       }
+       .header2{
+        font-size:13px;
+        margin-left:5px;
+       }
+ }
+
+ .footer{
+    background-color: #0C192C;
+    color:white;
+    padding: 40px 20px;
+  }
+  .footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  /* 3 kolona */
+  .footer-container>div{
+  width: 30%;
+  min-width: 250px;
+  }
+  .footer h3{
+    font-size: 1.5rem;
+    margin-bottom:15px;
+    color:#f9f9f9;
+  }
+  .footer p{
+    font-size: 1rem;
+    color:#bbb;
+  }
+  .footer-links ul{
+    list-style: none;
+    padding: 0;
+  }
+  .footer-links ul li {
+    margin:8px 0
+  }
+  .footer-links ul li a{
+    color:#bbb;
+    text-decoration: none;
+  }
+  .footer-links ul li a:hover{
+    color: white;
+  }
+  .footer-socials.social-icons a{
+    display: inline-block;
+    margin: 0 8px;
+    width: 32px;
+    height: 32px;
+  }
+  .footer-socials.social-icons img{
+    width: 100%;
+    height: auto;
+  }
+  .footer-bottom{
+    text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #444;
+  }
+  
+  @media (max-width: 480px) {
+    .footer h3 {
+      font-size: 1.2rem;
+    }
+  .footer p{
+    font-size: 0.9rem;
+  }
+  .footer-bottom{
+    font-size: 0.8rem;
+  }
+  }
+
+#title{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4D5A6C;
+    margin-top: 20px;
+}

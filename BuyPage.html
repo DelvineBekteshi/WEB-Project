@@ -31,35 +31,38 @@
                 <input type="search" id="search" placeholder="Search..">
               </form>
            <div class="house">
-            <a href="">
-                <img src="Img2.png" alt="house1" id="house">
-                <button class="next">></button>
+           
+                <img src="HousePicture1.png" alt="house1" id="house">
+                <button id="next">></button>
                 <button class="previous"><</button>
+            <a href="">     
                 <p class="houseTitle">Auburn Hillside Home </p>
                 <p class="houseDesc">Location: Auburn, California, USA</p>
                 <p class="houseDesc">Perched on a scenic hillside in Auburn, California, this exquisite home blends rustic 
                     charm with modern elegance. The exterior boasts a warm, earthy palette that harmonizes
-                     beautifully with the surrounding landscape, featuring natural stone accents and large, floor-to-ceiling windows that invite ample sunlight.</p>
-                <button class="cta-button">More...</button>
+                    beautifully with the surrounding landscape, featuring natural stone accents and large, floor-to-ceiling windows that invite ample sunlight.</p>
+                <button class="cta-button" id="Home1">More...</button>
                     </a>
            </div>
 
            <div class="house">
-            <a href="">
+            
                 <img src="img3.png" alt="house2" id="house">
-                <button class="next">></button>
-                <button class="previous"><</button>
+                <button id="next">></button>
+                <button class="previous"><</button>  
+                <a href=""> 
                 <p class="houseTitle">Sunset Haven House</p>
                 <p class="houseDesc">Location: Blue Ridge Mountains, North Carolina, USA</p>
                 <p class="houseDesc">Nestled on a gently sloping hillside overlooking the vast expanse of the Pacific Ocean, Sunset Haven stands as a beacon of tranquility and elegance. This coastal retreat captures the essence of serene living with its perfect blend of modern architecture and natural charm.</p>
                 <button class="cta-button">More...</button>
-                    </a>
+            </a>
            </div>
            <div class="house">
-            <a href="">
+            
                 <img src="img4.png" alt="house3" id="house">
-                <button class="next">></button>
+                <button id="next">></button>
                 <button class="previous"><</button>
+                <a href="">
                 <p class="houseTitle">Coastal Haven Villa</p>
                 <p class="houseDesc">Location: Malibu, CA, USA</p>
                 <p class="houseDesc"> A luxurious cliffside retreat overlooking the Pacific Ocean, featuring panoramic views, private beach access, and an open-concept interior for seamless indoor-outdoor living.</p>
@@ -68,10 +71,11 @@
            </div>
 
            <div class="house">
-            <a href="">
+            
                 <img src="img5.png" alt="house4" id="house">
-                <button class="next">></button>
+                <button id="next">></button>
                 <button class="previous"><</button>
+            <a href="">    
                 <p class="houseTitle">Sunset Grove Bungalow</p>
                 <p class="houseDesc">Location: Palm Springs, CA, USA</p>
                 <p class="houseDesc"> A luxurious cliffside retreat overlooking the Pacific Ocean, featuring panoramic views, private beach access, and an open-concept interior for seamless indoor-outdoor living.</p>
@@ -80,10 +84,11 @@
            </div>
 
            <div class="house">
-            <a href="">
+            
                 <img src="img6.jpg" alt="house5" id="house">
-                <button class="next">></button>
+                <button id="next">></button>
                 <button class="previous"><</button>
+                <a href="">
                 <p class="houseTitle">Hidden Oasis Hacienda</p>
                 <p class="houseDesc">Location: Ojai, CA, USA</p>
                 <p class="houseDesc"> A Spanish-style hacienda with terracotta tiles, lush courtyards, and a tranquil fountain at its center, perfect for those seeking a peaceful retreat.</p>
@@ -126,5 +131,12 @@
           </div>
           </section>
           </footer>
+          <script>
+            document.getElementById("Home1").onclick = function() {
+              location.href = 'House1.html';
+            };
+          </script>
     </body>
 </html>
+
+
