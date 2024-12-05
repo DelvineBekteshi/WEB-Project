@@ -94,7 +94,7 @@ header{
     color: black;
   }
   
-  /* Responsive Design */
+  /* Responsiviteti */
   @media (max-width: 768px) {
     .overlay-content {
       left: 3%;
