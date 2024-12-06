@@ -63,7 +63,8 @@
             }
             else{
                 alert("Email or Password is incorrect!");
-                alert("Remember: Password must contain one uppercase, one lowercase, one digit and be longer than 8 characters");
+                if(!validatePassword()){
+                    alert("Remember: Password must contain one uppercase, one lowercase, one digit and be longer than 8 characters");}
                 return false;
             }
         }
