@@ -45,6 +45,9 @@ body{
     background-color: #555;
   }
 
+  .button{
+    margin-bottom: 30px;
+  }
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
@@ -55,4 +58,8 @@ body{
         justify-content: center;
     }
 
+  }
+
+  contactBtn{
+    margin-bottom: 30px;
   }

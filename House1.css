@@ -46,24 +46,43 @@ header{
    color: white;
 }
 .image{
-    position: relative;
-    display: flex;
-    align-items: center; /* Centers content vertically */
-    justify-content: flex-start; /* Aligns content to the left */
-    height: auto; /* Full viewport height */
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: flex-start; /* Aligns content to the left */
+  width: 100%;
+  overflow: hidden;
+    object-fit: cover;
   }
- @media (max-width: 768px) {
-    .header1{
-        font-size:13px;
-       }
-       .header2{
-        font-size:13px;
-        margin-left:5px;
-       }
- }
+  @media (max-width: 768px) {
 
+    #houseImg{
+      width: 95%;
+      height:auto;
+      flex-wrap: wrap;
+      margin: 10px;
+    }
+
+    .icon {
+        margin: 10px 0;
+        height: 28px;
+        width: 28px;
+    }
+
+    #image {
+      height: auto; /* Full viewport height */
+      width: 100%;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .icon {
+        height: 24px;
+        width: 24px;
+    }
+}
  .footer{
     background-color: #0C192C;
     color:white;
