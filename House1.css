@@ -172,5 +172,30 @@ header{
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: white;
+}
+
+.part3{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   color: #4D5A6C;
+   font-size: 20px;
+  background-color: rgba(196, 195, 190, 0.7);
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+#button{
+  width: 180px;
+  height: 40px;
+  padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(69, 69, 69, 0.7); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    margin-bottom: 15px;
 }
