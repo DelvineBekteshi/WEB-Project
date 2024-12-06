@@ -10,7 +10,7 @@ html{
 }
 .row{
     display: flex;
-    
+    flex-direction: column;
 }
 .column { 
     float: left;
