@@ -45,15 +45,7 @@ header{
    margin-left: auto;
    color: white;
 }
-.image{
-  position: relative;
-  display: flex;
-  align-items: center; /* Centers content vertically */
-  justify-content: flex-start; /* Aligns content to the left */
-  width: 100%;
-  overflow: hidden;
-    object-fit: cover;
-  }
+ 
   @media (max-width: 768px) {
 
     #houseImg{
