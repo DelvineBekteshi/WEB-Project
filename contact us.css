@@ -5,6 +5,45 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+header{
+    background-color: #0C192C;
+    padding: 5px 40px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+ }
+ 
+ .header0 {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin-right: 20px;
+    margin-left: 5px;
+    justify-content: space-between;
+ }
+ .icon{
+     
+    height: 32px;
+    width: 32px;
+    border-radius: 80px;
+}
+
+.header1{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   padding-inline: 3px;
+   margin-right: 5px;
+}
+
+.header2{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-left: auto;
+   color: white;
+}
 .contact{
     position:relative;
     min-height:100vh;
