@@ -43,21 +43,7 @@ body{
     margin-left: auto;
     color: white;
  }
- .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 5%;  
-    transform: translateY(-50%);  
-    color: white;
-    text-align: left;
-  }
 
-  .overlay-content h1 {
-    font-size: clamp(2rem, 4vw, 4rem); 
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
 
   .cta-button {
     padding: 10px 20px;
@@ -87,7 +73,7 @@ body{
   border-radius: 15px;
   background-color: rgba(245,245,245,255);
   border: solid 1px;
-  width: 60%;
+  width: 20%;
   height: 35px;
 
 }
@@ -140,35 +126,12 @@ flex-wrap: wrap;
 margin: 10px;
 }
 
-.house{
-  position: relative;
+.house {
+    position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
-#next{
-  position: absolute;
-  top: 23%;
-  right: 79.35%;
-  width: 30px;
-  height: 80px;
-  opacity: 60%;
-  background-color: rgb(94, 89, 89);
-  font-size: 20px;
-}
-
-.previous{
-  position: absolute;
-  top: 23%;
-  left: 1%;
-  width: 30px;
-  height: 80px;
-  opacity: 60%;
-  background-color: rgb(94, 89, 89);
-  font-size: 20px;
-}
-
-
 
 
  /* Responsive Design */
@@ -204,7 +167,7 @@ margin: 10px;
  }
 
  #search{
-  width: 80%;
+  width: 40%;
  }
 
  .header1{
