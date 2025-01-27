@@ -6,10 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Database();
     $connection = $db->getConnection();
     $user = new useri($connection);
+    
 
     $email = $_POST['userName']; // Changed variable to 'email' for clarity
     $password = $_POST['password'];
-
+    $role = $_POST['role'] ?? 'user';
+    
     if ($user->register($email, $password)) {
         header("Location: log in.php");
         exit;
