@@ -1,0 +1,107 @@
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+   background-color: #0C192C; 
+}
+.header{
+    padding: 5px 40px;
+    color: white;
+    justify-content: space-between; 
+    display: flex;
+}
+.Customise{
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center; 
+    color: #0C192C;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.1px;
+    background:white;
+    border: 1px;
+    border-radius: 9px;
+     
+    
+}
+ 
+.Navigation{
+    display: flex;
+    padding: 5px 40px;
+    color: rgb(4, 0, 0);
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    height: 210px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 30px;
+    background: white;
+    border: 1px;
+    border-radius: 9px;
+
+}
+.Navigation ul {
+    padding-left: 0;         
+    margin: 0;  
+    text-align: center;
+}
+.Navigation li{
+    color: #293950;
+    list-style: none;
+    margin-bottom: 9px;
+}
+.Navigation2{
+    display: flex;
+    padding: 5px 40px;
+    color: rgb(4, 0, 0);
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 30px;
+    background: white;
+    border: 1px;
+    border-radius: 9px;
+    justify-content: center;
+    align-items: center;
+
+}
+.Navigation2 ul {
+    padding-left: 0;         
+    margin: 0;  
+    text-align: center;
+}
+.Navigation2 li{
+    color: #293950;
+    list-style: none;
+    margin-bottom: 9px;
+} 
+.Contactmessages{
+    color: #0C192C;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 400px;
+     height: 200px;
+     flex-direction: column;
+     gap: 10px;
+     margin-top: -300px;
+     margin-left: 1050px;
+     padding: 30px;
+     background:white;
+     border: 1px;
+     border-radius: 9px; 
+}
+.Contactmessages textarea {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  } 
