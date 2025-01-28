@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: log in.php");
         exit;
     } else {
-        echo "ERROR REGISTERING USER!";
+        echo "<script>
+        alert('ERROR REGISTERING USER!');
+    </script>";
     }
 }
 ?>

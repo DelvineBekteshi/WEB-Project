@@ -20,7 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     } 
     else {
-        echo "INVALID LOGIN CREDENTIALS";
+        echo "<script>
+    alert('INVALID LOGIN CREDENTIALS');
+</script>";
+        
     }
     
 }
