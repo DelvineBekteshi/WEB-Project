@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: 19283D;
+    background-color: #19283D;
 }
 .wrapper{
     width:420px;
@@ -73,7 +73,7 @@ body{
 .wrapper .btn{
     width: 100%;
     height: 45px;
-    background-color: 0C192C;
+    background-color: #0C192C;
     border: none;
     outline: none;
     border-radius: 40px;

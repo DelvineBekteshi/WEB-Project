@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = new useri($connection);
     
 
-    $email = $_POST['userName']; // Changed variable to 'email' for clarity
+    $email = $_POST['userName']; 
     $password = $_POST['password'];
     $role = $_POST['role'] ?? 'user';
     
