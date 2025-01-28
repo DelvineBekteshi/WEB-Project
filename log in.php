@@ -12,12 +12,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if($user->logIn($email,$password)){
         if($_SESSION['role']=='admin'){
         header("Location:Dashboard.php");
         } else{
             header("Location: BuyPage.php");
         }
+=======
+    if ($user->logIn($email, $password)) {
+        header("Location: home page.php");
+>>>>>>> b3fd8a9bd5bbabdc6db03d9673d20755ad987876
 =======
     if ($user->logIn($email, $password)) {
         header("Location: home page.php");
