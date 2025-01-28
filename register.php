@@ -20,12 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{background-color: #19283D;}
+        .btn{background-color: #0C192C;}
+    </style>
     <title>Register Form</title>
     <link rel="stylesheet" href="register.css">
 </head> 
@@ -43,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button type="submit" class="btn">Register</button>
             <div class="register-link">
-                <p>Already have an account? <a href="login.html">Login</a></p>
+                <p>Already have an account? <a href="log in.php">Login</a></p>
             </div>
         </form>
     </div>
