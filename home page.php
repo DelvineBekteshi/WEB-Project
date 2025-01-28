@@ -1,12 +1,3 @@
-<?php
-    session_start();
-    if (!isset($_SESSION['user_id'])) {
-        header('Location: log in.php');
-        exit;
-    }
-?>
-
-
 <html>
     <head>
         <title>Delandra Estate</title>
@@ -22,7 +13,7 @@
             <a href="BuyPage.html" class="header1">Buy / Rent</a>
             <a href="contact us.html" class="header1">Contact</a>
             <a href="about us.html" class="header1">Agents</a>
-            <a href="log in.html" class="header2">Log In/Register</a>
+            <a href="log in.php" class="header2">Log In/Register</a>
         </header>
         <main>
             <!-- pjesa e shtuar faza 2 e projektit -->

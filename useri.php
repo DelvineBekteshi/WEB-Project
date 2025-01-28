@@ -23,23 +23,24 @@ class Useri {
     }
 
     public function logIn($email, $password): bool {
-        $query = "SELECT id, email, password FROM {$this->table_name} WHERE email = :email";
+        $query = "SELECT id, email, password, role FROM {$this->table_name} WHERE email = :email";
         $stmt = $this->conn->prepare($query);
-
+    
         $stmt->bindParam(':email', $email);
         $stmt->execute();
-
+    
         if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
             if (password_verify($password, $row['password'])) {
                 session_start();
                 $_SESSION['useri_id'] = $row['id'];
                 $_SESSION['email'] = $row['email'];
+                $_SESSION['role'] = $row['role']; // Store the user's role in the session
                 return true;
             }
         }
         return false;
     }
 }
-?>
+    
