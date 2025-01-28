@@ -6,18 +6,25 @@ include_once 'useri.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Database();
     $connection = $db->getConnection();
-    $user = new Useri($connection);
+    $user = new useri($connection);
 
-    $email = $_POST['userName']; 
+    $email = $_POST['userName'];
     $password = $_POST['password'];
 
     if ($user->logIn($email, $password)) {
-        header("Location: home page.php");
+        if ($_SESSION['role'] === 'admin') {
+            header("Location: Dashboard.html");
+        } else {
+            header("Location: BuyPage.php");
+        }
         exit;
-    } else {
-        echo "INVALID LOGIN CREDENTIALS!";
+    } 
+    else {
+        echo "INVALID LOGIN CREDENTIALS";
     }
+    
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
