@@ -105,3 +105,77 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
   } 
+
+
+  .Statistikat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -380px;
+    
+    
+ }
+ .Statistikat .stat-box1{
+    padding-left: 0;         
+    margin: 0;  
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    margin-left: 200px;
+    width: 300px ;
+    height: 60px;
+ }
+ .Statistikat .stat-box2{
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 300px ;
+    height: 60px;
+ }
+ .Statistikat .stat-box3{
+    padding-left: 0;         
+    margin: 0;  
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    width: 300px ;
+    height: 60px;
+ }
+ .Statistikat .stat-box4{
+    padding-left: 0;         
+    margin: 0;  
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px ;
+    height: 60px;
+ }
+ .DetajetCustomer{    
+   display: flex;  
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center; 
+    
+    width: 53%;  
+    
+    height: 34%;  
+    padding: 10px;  
+    
+    background-color: white;  
+    border-radius: 9px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    margin: 60px auto;  
+    overflow: visible; 
+    margin-left: 200;
+   
+ }
+ .DetajetCustomer h3{
+    margin-left: 20px;
+ }
+ .DetajetCustomer ul{
+    margin-left: 20px;
+ }
