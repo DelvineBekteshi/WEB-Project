@@ -1,3 +1,25 @@
+<?php
+session_start();
+include_once 'database.php';
+include_once 'useri.php';
+
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    $db=new Database();
+    $connection==$db->getConnection();
+    $user=new Useri($connection);
+
+    $email=$_POST['userName'];
+    $password=$_POST['password'];
+
+    if($user->logIn($email,$password)){
+        header("Location:home page.php");
+        exit;
+    } else{
+        echo "INVALID LOGIN CREDENTIALS";
+    }
+
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
