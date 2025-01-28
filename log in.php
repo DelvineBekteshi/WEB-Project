@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($user->logIn($email, $password)) {
         if ($_SESSION['role'] === 'admin') {
-            header("Location: Dashboard.html");
+            header("Location: dashboard.html");
         } else {
-            header("Location: BuyPage.php");
+            header("Location: home page.php");
         }
         exit;
     } 

@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     $role = $_POST['role'] ?? 'user';
     
-    if ($user->register($email, $password)) {
+    if ($user->register($email, $password, $role)) {
         header("Location: log in.php");
         exit;
     } else {
