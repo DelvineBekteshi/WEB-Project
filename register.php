@@ -1,6 +1,7 @@
 <?php
-include_once 'database.php';
-include_once 'useri.php';
+session_start();
+include_once ('database.php');
+include_once ('useri.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Database();
