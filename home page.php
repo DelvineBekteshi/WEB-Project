@@ -2,7 +2,7 @@
 session_start();
 require_once "useri.php";
 
-$user =new User();
+$user =new useri('project');
 
 ?>
 
@@ -24,7 +24,7 @@ $user =new User();
             <a href="log in.php" class="header2">Log In/Register</a>
 
             <?php
-            if($user->isAdmin()):  
+            if($user->role=='admin'):  
             ?>
 
             <a href="dashboard.php" class="btn">Dashboard</a>
