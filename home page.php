@@ -1,13 +1,10 @@
 <?php 
 session_start();
 require_once "useri.php";
-<<<<<<< HEAD
  
-=======
-
+ 
 $user =new useri('project');
-
->>>>>>> ce4372a92a2d6e4900699c8aa2216f3ebd12b2bf
+ 
 ?>
 
 <html>
@@ -25,22 +22,13 @@ $user =new useri('project');
             <a href="BuyPage.html" class="header1">Buy / Rent</a>
             <a href="contact us.html" class="header1">Contact</a>
             <a href="about us.html" class="header1">Agents</a>
-<<<<<<< HEAD
-            <?php if($_SESSION['role'] == 'admin'): ?>
-                <a href="dashboard.php" class="btn">Dashboard</a>
-=======
+ 
+    <?php
+if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
+    echo "<a href='dashboard.php' class='header1'>Dashboard</a>";
+}
+?>
             <a href="log in.php" class="header2">Log In/Register</a>
-
-            <?php
-            if($user->role=='admin'):  
-            ?>
-
-            <a href="dashboard.php" class="btn">Dashboard</a>
->>>>>>> ce4372a92a2d6e4900699c8aa2216f3ebd12b2bf
-            <?php endif; ?>
-
-            <a href="log in.php" class="header2">Log In/Register</a>
-
            
         </header>
         <main>
