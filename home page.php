@@ -1,9 +1,13 @@
 <?php 
 session_start();
 require_once "useri.php";
+<<<<<<< HEAD
+ 
+=======
 
-$user =new User();
+$user =new useri('project');
 
+>>>>>>> ce4372a92a2d6e4900699c8aa2216f3ebd12b2bf
 ?>
 
 <html>
@@ -21,15 +25,23 @@ $user =new User();
             <a href="BuyPage.html" class="header1">Buy / Rent</a>
             <a href="contact us.html" class="header1">Contact</a>
             <a href="about us.html" class="header1">Agents</a>
+<<<<<<< HEAD
+            <?php if($_SESSION['role'] == 'admin'): ?>
+                <a href="dashboard.php" class="btn">Dashboard</a>
+=======
             <a href="log in.php" class="header2">Log In/Register</a>
 
             <?php
-            if($user->isAdmin()):  
+            if($user->role=='admin'):  
             ?>
 
             <a href="dashboard.php" class="btn">Dashboard</a>
+>>>>>>> ce4372a92a2d6e4900699c8aa2216f3ebd12b2bf
             <?php endif; ?>
 
+            <a href="log in.php" class="header2">Log In/Register</a>
+
+           
         </header>
         <main>
             <!-- pjesa e shtuar faza 2 e projektit -->
@@ -273,7 +285,8 @@ $user =new User();
         <h3>Quick Links</h3>
         <ul>
             <?php if(isset($_SESSION['email'])): ?>
-            <li><a herf="logout.php" class="btn">Log out</a></li>
+                <!-- linku -->
+            <li><a herf="logout.php" class="btn">Log out</a></li> 
             <?php endif; ?>
             <li><a href="home page.html">Home</a></li> 
             <li><a href="about us.html">About </a></li>

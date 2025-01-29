@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     if ($user->logIn($email, $password)) {
-        if ($_SESSION['role'] === 'admin') {
+        if ($_SESSION['role'] == 'admin') {
             header("Location: dashboard.html");
         } else {
             header("Location: home page.php");
