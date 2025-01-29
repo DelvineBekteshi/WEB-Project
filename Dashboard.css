@@ -60,7 +60,7 @@ body{
     flex-direction: column;
     gap: 10px;
     width: 100px;
-    height: 100px;
+    height: 120px;
     margin-top: 10px;
     margin-left: 10px;
     padding: 30px;
@@ -90,12 +90,12 @@ body{
      height: 200px;
      flex-direction: column;
      gap: 10px;
-     margin-top: -300px;
      margin-left: 1050px;
      padding: 30px;
      background:white;
      border: 1px;
      border-radius: 9px; 
+     margin-top: 80px;
 }
 .Contactmessages textarea {
     width: 300px;
@@ -106,54 +106,33 @@ body{
     border-radius: 5px;
   } 
 
-
+  .Nav{
+    width: 100%;
+  }
+ .kolona1, .kolona2{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+ }
   .Statistikat{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    margin-top: -380px;
-    
-    
- }
- .Statistikat .stat-box1{
-    padding-left: 0;         
-    margin: 0;  
-    text-align: center;
-    background: white;
-    border-radius: 5px;
+    margin-top: -390px;
     margin-left: 200px;
-    width: 300px ;
-    height: 60px;
+    width: 80%;
  }
- .Statistikat .stat-box2{
+ .Statistikat .stat-box1{ 
     text-align: center;
     background: white;
     border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 10px;
+    margin-left: 50px;
     width: 300px ;
     height: 60px;
  }
- .Statistikat .stat-box3{
-    padding-left: 0;         
-    margin: 0;  
-    text-align: center;
-    background: white;
-    border-radius: 5px;
-    width: 300px ;
-    height: 60px;
- }
- .Statistikat .stat-box4{
-    padding-left: 0;         
-    margin: 0;  
-    text-align: center;
-    background: white;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 300px ;
-    height: 60px;
- }
+
+
+
  .DetajetCustomer{    
    display: flex;  
     flex-direction: column;  
@@ -167,10 +146,10 @@ body{
     
     background-color: white;  
     border-radius: 9px;  
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-    margin: 60px auto;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
     overflow: visible; 
-    margin-left: 200;
+    margin-left: 200px;
+    margin-top: -260px;
    
  }
  .DetajetCustomer h3{
@@ -181,5 +160,77 @@ body{
  }
 
  @media (max-width: 768px){
-    
+    body{
+        width: 100%;
+    }
+    .kolona1, .kolona2{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+
+    }
+    .Statistikat{
+        display: flex;
+        flex-direction: column;
+       margin-top: -500px;
+       margin-left: 150px;
+    }
+    .stat-box1{
+        width:50%;
+        margin: 10px;
+
+    }
+    #koment{
+        margin-right: 15px;
+    }
+    .DetajetCustomer{
+        width: 90%;
+        margin-right: -15px;
+        margin: 0px;
+        margin-top: -260px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .Contactmessages{
+        padding: 20px;
+        margin-bottom: 300px;
+        margin-left: 2px;
+        margin-top: 200px;
+        width: 90%;
+    }
+    .Navigation2{
+        height: 200px;
+    }
+   
+ }
+
+ @media (max-width: 480px){
+    .kolona1, .kolona2{
+        flex-direction: column;
+        
+    }
+    .Statistikat{
+        flex-direction: column;
+    }
+     .Statistikat .stat-box1{
+        width:50%;
+        margin: 10px;
+        margin-left: -30px;
+    }
+    .DetajetCustomer{
+        width: 90%;
+        margin-right: -15px;
+        margin: 0px;
+        margin-top: -260px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .Contactmessages{
+        padding: 20px;
+        margin-bottom: 300px;
+        margin-left: 2px;
+        margin-top: 120px;
+        width: 90%;
+    }
+   
  }
