@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
         </head>
         <body>
             <div class="header"> 
-            <a href="home page.php"><h2>Delandra Estates</h2></a>
+            <a href="index.php"><h2>Delandra Estates</h2></a>
             <h4>Users name</h4>
         </div>
 
@@ -26,9 +26,9 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
         <div class="Navigation">
             <h3>Navigation</h3>
             <ul> 
-            <li><a href="Dashboard.html">Dashboard</a></li>
-            <li ><a href="home page.html">Home</a></li>
-            <li><a href="BuyPage.html">Buy/Rent</a></li>
+            <li><a href="Dashboard.php">Dashboard</a></li>
+            <li ><a href="index.php">Home</a></li>
+            <li><a href="BuyPage.php">Buy/Rent</a></li>
             <li><a href="contact us.html">Contact</a></li>
             </ul>
         </div>
@@ -36,9 +36,9 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
         <div class="Navigation2">
             <h3>Agents</h3>
             <ul>
-                <li><a href="about us.html">Arwen Dais</a></li>
-                <li><a href="about us.html">Lyra Winslow</a></li>
-                <li><a href="about us.html">Noelle Zeph</a></li>
+                <li><a href="about us.php">Arwen Dais</a></li>
+                <li><a href="about us.php">Lyra Winslow</a></li>
+                <li><a href="about us.php">Noelle Zeph</a></li>
             </ul>
         </div>
 

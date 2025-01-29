@@ -1,0 +1,341 @@
+a{
+    text-decoration: none;
+}
+
+body{
+  background-color: rgba(240, 237, 215, 0.8);
+}
+
+header{
+   background-color: #0C192C;
+   padding: 5px 40px;
+   color: white;
+   justify-content: space-between;
+   align-items: center;
+   display: flex;
+   
+}
+
+.header0 {
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   margin-right: 20px;
+   margin-left: 5px;
+   justify-content: space-between;
+}
+
+.icon{
+     
+    height: 32px;
+    width: 32px;
+    border-radius: 80px;
+}
+
+.header1{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: white;
+   padding-inline: 3px;
+   margin-right: 5px;
+}
+
+.header2{
+   font-size: 15px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-left: auto;
+   color: white;
+}
+
+/* pjesa e shtuar faza 2 */
+.image-container {
+  position: relative; 
+  height:  100vh; 
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid white;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.image-container .slides{
+  display: flex;
+  height: 90%;
+}
+.image-container .slides .slide{
+  min-width: 100%;
+}
+.image-container .slides .slide img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+  object-fit: cover;
+}
+.image-container span.next, .image-container span.prev{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.image-container span.next{
+  right: 10px;
+}
+.image-container span.prev{
+  left: 10px;
+}
+.image-container span.next:hover, .image-container span.prev:hover{
+  background-color: white;
+  opacity: 0.8;
+  color: #222;
+}
+.image-container .dots{
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.image-container .dots .dot{
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.image-container .dots .active{
+  background-color: #333;
+}
+/* fundi */
+  
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 5%; 
+    transform: translateY(-50%);  
+    color: white;
+    text-align: left;
+  }
+  
+  .overlay-content h1 {
+    font-size: clamp(2rem, 4vw, 4rem); 
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+  
+  /* Responsiviteti */
+  @media (max-width: 768px) {
+    .overlay-content {
+      left: 3%;
+    }
+  
+    .overlay-content h1 {
+      font-size: clamp(1.5rem, 5vw, 3rem);  
+    }
+  
+    .cta-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+#Background1{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+.part2{
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+ }
+.part2 h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4D5A6C;
+}
+.part2 p{
+    font-size: 1.2rem;
+    color: #666;
+}
+ 
+ 
+
+.part3{
+    font-size: 30px;
+}
+
+.footer{
+    background-color: #0C192C;
+    color:white;
+    padding: 40px 20px;
+}
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+ /* 3 kolona */
+.footer-container>div{
+width: 30%;
+min-width: 250px;
+}
+.footer h3{
+    font-size: 1.5rem;
+    margin-bottom:15px;
+    color:#f9f9f9;
+}
+.footer p{
+    font-size: 1rem;
+    color:#bbb;
+}
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li {
+    margin:8px 0
+}
+.footer-links ul li a{
+    color:#bbb;
+    text-decoration: none;
+}
+.footer-links ul li a:hover{
+    color: white;
+}
+.footer-socials.social-icons a{
+    display: inline-block;
+    margin: 0 8px;
+    width: 32px;
+    height: 32px;
+}
+.footer-socials.social-icons img{
+    width: 100%;
+    height: auto;
+}
+.footer-bottom{
+    text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #444;
+}
+/* Responsiviteti */
+@media(max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-container>div{
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .News{
+    flex-direction: column;
+  }
+
+  .newsCon{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .NewsTitle{
+    margin: 5px;
+  }
+
+  .NewsDesc{
+    margin: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+.footer p{
+  font-size: 0.9rem;
+}
+.footer-bottom{
+  font-size: 0.8rem;
+}
+
+.News{
+    flex-direction: column;
+  }
+
+
+}
+
+.part3{
+  width: 100%;
+  height: auto;
+}
+
+#part3Title{
+  color: #3E4755;
+}
+.News{
+  box-shadow: 0px 4 px 8px rgba(0, 0, 0, 0.3);
+  padding-bottom: 70px;
+  max-width: 100%;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.image{
+  width: 40%;
+  max-width: 95%;
+  height: 30%;
+  max-height: 75%;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.NewsTitle{
+  font-size: 22px;
+  color: 5B697E;
+  width: 100%;
+}
+
+.NewsDesc{
+  font-size: 20px;
+  color: #666;
+}
+
+.newsCon{
+  display: flex;
+}

@@ -36,7 +36,7 @@ class Useri {
                 session_start();
                 $_SESSION['useri_id'] = $row['id'];
                 $_SESSION['email'] = $row['email'];
-                $_SESSION['role'] = $row['role']; // Store the user's role in the session
+                $_SESSION['role'] = $row['role']; 
                 return true;
             }
         }

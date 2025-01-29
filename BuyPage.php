@@ -14,12 +14,12 @@
     <body>
         <header>
             <i class='bx bxs-home-heart' style='color:#ffffff'  ></i>
-            <a href="home page.php" class="header0">Delandra Estates</a>
-            <a href="home page.php" class="header1">Home</a>
+            <a href="index.php" class="header0">Delandra Estates</a>
+            <a href="index.php" class="header1">Home</a>
             <a href="BuyPage.php" class="header1">Buy / Rent</a>
             <a href="contact us.html" class="header1">Contact</a>
-            <a href="about us.html" class="header1">Agents</a>
-            <a href="log in.html" class="header2">Log In/Register</a>
+            <a href="about us.php" class="header1">Agents</a>
+            <a href="log in.php" class="header2">Log In/Register</a>
         </header>
 
         <main>
@@ -40,7 +40,7 @@
                 <p class="houseDesc">Perched on a scenic hillside in Auburn, California, this exquisite home blends rustic 
                     charm with modern elegance. The exterior boasts a warm, earthy palette that harmonizes
                     beautifully with the surrounding landscape, featuring natural stone accents and large, floor-to-ceiling windows that invite ample sunlight.</p>               
-           <button class="cta-button" id="Home1" onclick="BuyPage.html='House1.html';">More...</button>
+           <button class="cta-button" id="Home1" onclick="BuyPage.php='House1.html';">More...</button>
          </div>
      </div>
 
@@ -102,9 +102,9 @@
               <div class="footer-links">
                   <h3>Quick Links</h3>
                   <ul>
-                      <li><a href="#">Home</a></li>
+                      <li><a href="index.php">Home</a></li>
                       <li><a href="#">Services</a></li>
-                      <li><a href="#">About</a></li>
+                      <li><a href="about us.php">About</a></li>
                       <li><a href="#">Contact</a></li>
                   </ul>
               </div>
