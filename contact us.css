@@ -8,7 +8,7 @@
 header{
     background-color: #0C192C;
     padding: 5px 40px;
-    color: white;
+    color: black;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -18,7 +18,7 @@ header{
  .header0 {
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
+    color: black;
     margin-right: 20px;
     margin-left: 5px;
     justify-content: space-between;
@@ -33,7 +33,7 @@ header{
 .header1{
    font-size: 15px;
    font-family: Georgia, 'Times New Roman', Times, serif;
-   color: white;
+   color: black;
    padding-inline: 3px;
    margin-right: 5px;
 }
@@ -42,7 +42,7 @@ header{
    font-size: 15px;
    font-family: Georgia, 'Times New Roman', Times, serif;
    margin-left: auto;
-   color: white;
+   color: black;
 }
 .contact{
     position:relative;
@@ -52,7 +52,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-     background: url(city2.png);
+     background: rgb(121, 165, 230);
      background-size: cover;
 }
 .contact .content{
@@ -89,7 +89,7 @@ header{
 .container .contactInfo .box .icon{
     min-width: 60px;
     height: 60px;
-    background: white;
+    background: rgb(121, 165, 230);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +100,7 @@ header{
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: white;
+    color: black;
     flex-direction: column;
     font-weight: 300;
 }
@@ -110,7 +110,7 @@ header{
  .contactForm{
     width: 40%;
     padding: 40px;
-    background: white;
+    background: black;
     border-radius: 50px;
  }
  .contactForm h2{
