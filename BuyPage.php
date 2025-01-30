@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+?>
 <html>
 <?php
     session_start();
@@ -102,6 +107,7 @@
               <div class="footer-links">
                   <h3>Quick Links</h3>
                   <ul>
+                      <li><a href="logout.php">Log out</a></li>
                       <li><a href="index.php">Home</a></li>
                       <li><a href="#">Services</a></li>
                       <li><a href="about us.php">About</a></li>

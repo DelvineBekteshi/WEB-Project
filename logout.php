@@ -1,22 +1,14 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+session_destroy();
 
 session_start();
+$_SESSION['id'] = null;
 
+echo '<script>document.location="index.php"</script>'
 
-if (isset($_SESSION['id']) ) {
-   
-    session_unset();
-
-    
-    session_destroy();
-
-    
-    header("Location: log in.php");
-    exit();
-} else {
-    
-    header("Location: log in.php"); 
-    exit();
-}
-?>
+    ?>
 

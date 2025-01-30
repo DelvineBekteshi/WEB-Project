@@ -8,7 +8,20 @@ class Useri {
         $this->conn = $db;
     }
 
+    private function emailExists($email): bool {
+        $query = "SELECT id FROM {$this->table_name} WHERE email = :email";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+
+        
+        return $stmt->rowCount() > 0;
+    }
+
     public function register($email, $password, $role): bool {
+        if($this->emailExists($email)){
+            return false;
+        }
         $query = "INSERT INTO {$this->table_name} (email, password, role) VALUES(:email, :password, :role)";
         $stmt = $this->conn->prepare($query);
 
