@@ -11,7 +11,7 @@ if (isset($_SESSION['id']) ) {
     session_destroy();
 
     
-    header("Location: index.php");
+    header("Location: log in.php");
     exit();
 } else {
     
