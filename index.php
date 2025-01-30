@@ -273,9 +273,7 @@ if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
     <div class="footer-links">
         <h3>Quick Links</h3>
         <ul>
-             <?php if(isset($_SESSION['email'])): ?>
             <li><a href="logout.php">Log out</a></li>
-            <?php endif; ?> 
             <li><a href="index.php">Home</a></li> 
             <li><a href="about us.php">About </a></li>
             <li><a href="contact us.html">Contact</a></li>
