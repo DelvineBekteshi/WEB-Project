@@ -127,6 +127,8 @@
               location.href = 'House1.html';
             };
           </script>
+          <?php include 'footer.php'; ?>
+
     </body>
 </html>
 

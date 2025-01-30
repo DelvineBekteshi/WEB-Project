@@ -96,6 +96,7 @@
             </div>
             </section>
             </footer>
-        
+            <?php include 'footer.php'; ?>
+
     </body>
 </html>

@@ -10,18 +10,18 @@ $user =new useri('project');
 <html>
     <head>
         <title>Delandra Estate</title>
-        <link rel="stylesheet" href="home page.css">
+        <link rel="stylesheet" href="index.css">
         <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
         <header>
             <i class='bx bxs-home-heart' style='color:#ffffff'  ></i>
-            <a href="home page.html" class="header0">Delandra Estates</a>
-            <a href="home page.html" class="header1">Home</a>
+            <a href="index.php" class="header0">Delandra Estates</a>
+            <a href="index.php" class="header1">Home</a>
             <a href="BuyPage.html" class="header1">Buy / Rent</a>
             <a href="contact us.html" class="header1">Contact</a>
-            <a href="about us.html" class="header1">Agents</a>
+            <a href="about us.php" class="header1">Agents</a>
  
     <?php
 if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
@@ -276,8 +276,8 @@ if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
                 <!-- linku -->
             <li><a herf="logout.php" class="btn">Log out</a></li> 
             <?php endif; ?>
-            <li><a href="home page.html">Home</a></li> 
-            <li><a href="about us.html">About </a></li>
+            <li><a href="index.php">Home</a></li> 
+            <li><a href="about us.php">About </a></li>
             <li><a href="contact us.html">Contact</a></li>
         </ul>
     </div>
