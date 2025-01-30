@@ -21,7 +21,7 @@ if ($_SESSION['role'] != 'admin') {
         </div>
 
         <div class="Customise">
-            <h4>Customise this page</h4>
+           <a href="ShtoShtepi.php"><h4>Add Products</h4></a>
         </div>
 
         <div class="Nav">
