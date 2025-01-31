@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $house->setTitle($_POST['title']);
         $house->setDescription($_POST['description']);
         $house->setLocation($_POST['location']);
-        $house->setImage_url($_POST['fotoShtepise']);
+        $house->setImage_url($_FILES['fotoShtepise']['name']);
         $house->handleFileUpload();
         $house->shtoShtepine();
         header("Location: ShtoShtepi.php");

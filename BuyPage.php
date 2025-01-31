@@ -36,10 +36,13 @@ $houses = $houseObj->getHouses();
 
     <?php foreach ($houses as $house): ?>
             <div class="house">
-                <img src="<?php echo htmlspecialchars($house['image_url']); ?>" alt="House Image">
-                <h2><?php echo htmlspecialchars($house['title']); ?></h2>
-                <p><?php echo htmlspecialchars($house['description']); ?></p>
-                <p>Location: <?php echo htmlspecialchars($house['location']); ?></p>
+                <img src="<?php echo htmlspecialchars($house['image_url']); ?>" alt="House Image" id="house">
+                <div>
+                <h2 class="houseTitle"><?php echo htmlspecialchars($house['title']); ?></h2>
+                <p class="houseDesc"><?php echo htmlspecialchars($house['description']); ?></p>
+                <p class="houseDesc">Location: <?php echo htmlspecialchars($house['location']); ?></p>
+                <button class="cta-button">More...</button>
+                   </div>
             </div>
         <?php endforeach; ?>
 
