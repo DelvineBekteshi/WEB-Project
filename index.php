@@ -4,10 +4,13 @@ if (!isset($_SESSION)) {
   }
 require 'database.php';
 require_once "useri.php";
- 
- 
+  
 $user =new useri('project');
- 
+
+require_once 'News.php'; 
+
+$news1 = new News();
+$news = $news1->getNews();
 ?>
 
 <html>
@@ -193,74 +196,18 @@ if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
 
         <div class="part3">
             <p id="part3Title"><b>Delandra Estate News</b></p>
-            <div class="News">
-            <a href=""><p class="NewsTitle"><b>"Celebrating Diversity: A Real Estate Agency That Reflects Our Community"</b></p></a>
-            <div class="newsCon">
-                <img src="news1.jpg" alt="News1" class="image">
-                <div class="NewsDesc">
-                    <p>At Delandra Estates, we are proud to represent and work within a diverse community. Whether you're buying your first
-                        home, searching for an investment property, or exploring new neighborhoods, we understand that everyone has unique NewsDesc
-                        and aspirations. Our team is committed to serving people from all walks of life, ensuring that every client feels valued and supported throughout
-                        the real estate process.
-                        We recognize that the journey to finding the right property is deeply personal, and we honor the variety of backgrounds, cultures,
-                        and life experiences that each client brings. Our multilingual team is dedicated to bridging any communication gaps, ensuring that language
-                        is never a barrier to your real estate success.We believe that building lasting relationships is as important as finding the perfect property, 
-                        and we take the time to listen, understand, and tailor our approach to each individual's needs. Our commitment to integrity and transparency ensures 
-                        that you are informed and confident at every step, whether negotiating offers, navigating financing options, or finalizing a sale. Beyond transactions, we are passionate
-                         about fostering connections within our community, helping individuals and families lay the foundation for a brighter future.
-                         We believe that building lasting relationships is as important as finding the perfect property, and we take the time to listen,
-                          understand, and tailor our approach to each individual's needs. Our commitment to integrity and transparency ensures that you are informed 
-                          and confident at every step, whether negotiating offers, navigating financing options, or finalizing a sale. Beyond transactions, we are passionate about fostering 
-                          connections within our community, helping individuals and families lay the foundation for a brighter future.
-                    </p>
-                </div>
-            </div>
-            </div>
-        
-            <div class="News">
-                <a href=""><p class="NewsTitle"><b>"Unlocking Dream Homes: Delandra Estates Delivers Top-Tier Real Estate Services"</b></p></a>
-                <div class="newsCon">
-                    <img src="news2.avif" alt="news2" class="image">
-                    <div class="NewsDesc">
-                        <p>With over 10 years of experience in the real estate industry, I specialize in turning your dreams into reality.
-                             Whether you're looking for a luxury property, your first home, or an investment opportunity, my expertise in the 
-                             local market ensures that you find the perfect fit at the best price. Throughout my career, I’ve had the privilege 
-                             of helping a wide range of clients—from first-time buyers looking for their dream home to seasoned investors seeking 
-                             high-yield opportunities. My approach is rooted in building trust, understanding your specific needs, and guiding you 
-                             through every step of the real estate process with a focus on delivering results. I pride myself on staying ahead of 
-                             market trends, leveraging data-driven insights to provide clients with a competitive edge in every transaction. 
-                             My extensive network of industry professionals—from lenders to contractors—ensures that my clients receive comprehensive 
-                             support throughout their journey. Communication is at the heart of my service, and I am always available to answer questions,
-                            provide updates, and offer advice tailored to your unique goals. By combining strong negotiation skills with a deep understanding
-                             of market dynamics, I consistently secure the best outcomes for my clients.  
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="News">
-                <a href=""><p class="NewsTitle"><b>"From First-Time Home buyers to Million-Dollar Listings: Delandra Estates Surpasses $10 Million
-                    in Sales This Year"</b></p></a>
-                <div class="newsCon">
-                    <img src="news3.jpg" alt="news3" class="image">
-                    <div class="NewsDesc">
-                        <p>In an impressive display of skill and market knowledge, Delandra Estates has achieved an incredible $10 million in sales in 2024.
-                             This milestone not only underscores their ability to navigate the competitive real estate landscape 
-                            but also highlights their dedication to helping clients find the perfect properties—whether it’s the first home or a high-end investment.
-                            This significant achievement reflects the team's commitment to excellence, consistently delivering results in a market that demands expertise, 
-                            insight, and a personalized approach. By focusing on both luxury homes and emerging neighborhoods, Delandra Estates has proven time and again 
-                            that their understanding of local trends and client needs leads to successful transactions. Beyond the impressive figures, Delandra Estates 
-                            attributes their success to their unwavering commitment to understanding the unique goals of each client. The team goes above and beyond by 
-                            providing tailored solutions, ensuring that buyers and sellers alike feel empowered and supported throughout the process. Their expertise extends
-                            beyond closing deals—Delandra Estates prides itself on being a resource for market insights, offering clients the knowledge they need to make informed 
-                            decisions in a competitive environment. In addition to their focus on individual client success, the team actively contributes to the communities they 
-                            serve. By supporting local events, engaging with neighborhood initiatives, and promoting sustainable real estate practices, they foster a sense of connection 
-                            and responsibility that resonates with their clients. As they look toward the future, Delandra Estates 
-                            remains committed to setting new standards of excellence, ensuring that every client experience is not just successful but truly exceptional.</p>
-                    </div>
+            <?php foreach ($news as $new): ?>
+                <div class="News">
+            <a href=""><p class="NewsTitle"><b><?php echo htmlspecialchars($new['title']); ?></b></p></a>
+            <div class="newsCon">
+                <img src="<?php echo htmlspecialchars($new['img']); ?>" alt="News1" class="image">
+                <div class="NewsDesc">
+                    <p><?php echo htmlspecialchars($new['description']); ?></p>
                 </div>
             </div>
-        </div>
+            </div>
+            <?php endforeach; ?>
         </main>
         <footer>
 <section class="footer">

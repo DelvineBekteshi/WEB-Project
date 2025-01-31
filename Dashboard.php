@@ -21,7 +21,7 @@ if ($_SESSION['role'] != 'admin') {
         </div>
 
         <div class="Customise">
-           <a href="ShtoShtepi.php"><h4>Add Products</h4></a>
+           <h4>Dashboard</h4>
         </div>
 
         <div class="Nav">
@@ -31,7 +31,6 @@ if ($_SESSION['role'] != 'admin') {
             <li><a href="Dashboard.php">Dashboard</a></li>
             <li ><a href="index.php">Home</a></li>
             <li><a href="BuyPage.php">Buy/Rent</a></li>
-            <li><a href="contact us.html">Contact</a></li>
             <li><a href="logout.php">Log Out</a></li>
             </ul>
         </div>
@@ -50,18 +49,18 @@ if ($_SESSION['role'] != 'admin') {
             <div class="Statistikat">
                 <div class="kolona1">
             <div class="stat-box1">
-            <p>Customers</p>
+            <a href="ShtoLajme.php"><p>Add News</p></a>
             </div>
             <div class="stat-box1">
-                <p>Views</p>
+            <a href="ShtoShtepi.php"><p>Add Products</p></a> 
             </div>
             </div>
             <div class="kolona2">
             <div class="stat-box1">
-                <p>Sales</p>
+              <a href=""><p>Add Agents</p></a>  
             </div>
             <div class="stat-box1">
-                <p id="koment">Comments</p>
+               <a href="contact us.php"><p id="koment">Contact</p></a> 
             </div>
         </div>
         </div>

@@ -1,42 +1,41 @@
-<?php 
-if(!isset($_SESSION)){
-    session_start();    
-}
-
-require_once('database.php');
-
-class Houses extends Database {
-    private $id;
-    private $title;
-    private $description;
-    private $location;
-    private $image_url;
-    private $conn;
-
-    public function __construct($id='', $title='', $description='', $location='', $image_url=''){
-        parent::__construct();
-        $this->id = $id;
-        $this->title = $title;
-        $this->description = $description;
-        $this->location = $location;
-        $this->image_url = $image_url;
-        $this->conn = $this->getConnection();
+<?php
+    if(!isset($_SESSION)){
+        session_start();    
     }
+    
+    require_once('database.php');
+
+    class News extends Database{
+        private $id;
+        private $title;
+        private $img;
+        private $description;
+        private $conn;
+        
+        public function __construct($id='', $title='', $img='', $description=''){
+            parent::__construct();
+            $this->id=$id;
+            $this->title = $title;
+            $this->img = $img;
+            $this->description = $description;
+
+            $this->conn = $this->getConnection();
+        }
 
     public function getId(){ return $this->id; }
     public function getTitle(){ return $this->title; }
     public function getDescription(){ return $this->description; }
-    public function getLocation(){ return $this->location; }
-    public function getImage_url(){ return $this->image_url; }
+    public function getImg(){ return $this->img; }
+    
 
     public function setTitle($title){ $this->title = $title; }
     public function setDescription($description){ $this->description = $description; }
-    public function setLocation($location){ $this->location = $location; }
-    public function setImage_url($image_url){ $this->image_url = $image_url; }
-    
+    public function setImg($img){ $this->img = $img; }
+
+
     public function handleFileUpload() {
-        if (isset($_FILES['fotoShtepise']) && $_FILES['fotoShtepise']['error'] === 0) {
-            $foto = $_FILES['fotoShtepise'];
+        if (isset($_FILES['foto']) && $_FILES['foto']['error'] === 0) {
+            $foto = $_FILES['foto'];
             $emriFotos = $foto['name'];
             $emeriTempIFotes = $foto['tmp_name'];
 
@@ -49,30 +48,29 @@ class Houses extends Database {
                 $emriUnikFotos = uniqid('', true) . "." . $formatiIFotosPerKontrollim;
                 $destinacioniFotos = 'WEB-Project/' . $emriUnikFotos;
                 if (move_uploaded_file($emeriTempIFotes, $destinacioniFotos)) {
-                    $this->setImage_url($destinacioniFotos);
+                    $this->setImg($destinacioniFotos);
                 }
             }
         }
     }
     
-    public function shtoShtepine() {
+    public function shtoLajme() {
         try {
-            $sql = "INSERT INTO `houses`(`title`, `description`, `location`, `image_url`) VALUES (:title, :description, :location, :image_url)";
+            $sql = "INSERT INTO `new`(`title`, `description`, `img`) VALUES (:title, :description, :img)";
             $stm = $this->conn->prepare($sql);
             $stm->bindParam(':title', $this->title);
             $stm->bindParam(':description', $this->description);
-            $stm->bindParam(':location', $this->location);
-            $stm->bindParam(':image_url', $this->image_url);
+            $stm->bindParam(':img', $this->img);
             $stm->execute();
-            $_SESSION['ProduktiUShtuaMeSukses'] = true;
+            $_SESSION['LajmiUShtuaMeSukses'] = true;
         } catch (Exception $e) {
             return $e->getMessage();
         }
     }
 
-    public function getHouses() {
+    public function getNews() {
         try {
-            $query = "SELECT * FROM houses";
+            $query = "SELECT * FROM new";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -82,4 +80,5 @@ class Houses extends Database {
     }
 }
 
+    
 ?>
