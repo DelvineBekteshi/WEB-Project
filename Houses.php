@@ -48,7 +48,7 @@ class Houses extends Database {
 
             if (in_array($formatiIFotosPerKontrollim, $teLejuara)) {
                 $emriUnikFotos = uniqid('', true) . "." . $formatiIFotosPerKontrollim;
-                $destinacioniFotos = 'uploads/' . $emriUnikFotos;
+                $destinacioniFotos = 'WEB-Project/' . $emriUnikFotos;
                 if (move_uploaded_file($emeriTempIFotes, $destinacioniFotos)) {
                     $this->setImage_url($destinacioniFotos);
                 }
@@ -68,6 +68,17 @@ class Houses extends Database {
             $_SESSION['ProduktiUShtuaMeSukses'] = true;
         } catch (Exception $e) {
             return $e->getMessage();
+        }
+    }
+
+    public function getHouses() {
+        try {
+            $query = "SELECT * FROM houses";
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return [];
         }
     }
 }

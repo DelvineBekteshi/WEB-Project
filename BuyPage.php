@@ -1,21 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: log in.php');
-    exit;
-}
 
-require_once('database.php');
-require_once('houses.php');
-
-$db = new Database();
-$conn = $db->getConnection();
-
-// Fetch houses from the database
-$sql = "SELECT * FROM houses";
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$houses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+require_once('Houses.php');
+$houseObj = new Houses();
+$houses = $houseObj->getHouses();
 ?>
 
 <!DOCTYPE html>
@@ -47,16 +35,13 @@ $houses = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
 
     <?php foreach ($houses as $house): ?>
-        <div class="house">
-            <img src="<?= htmlspecialchars($house['image_url']) ?>" alt="<?= htmlspecialchars($house['title']) ?>" id="house">
-            <div>
-                <p class="houseTitle"><?= htmlspecialchars($house['title']) ?></p>
-                <p class="houseDesc">Location: <?= htmlspecialchars($house['location']) ?></p>
-                <p class="houseDesc"><?= htmlspecialchars($house['description']) ?></p>
-                <button class="cta-button" onclick="location.href='HouseDetails.php?id=<?= $house['id'] ?>'">More...</button>
+            <div class="house">
+                <img src="<?php echo htmlspecialchars($house['image_url']); ?>" alt="House Image">
+                <h2><?php echo htmlspecialchars($house['title']); ?></h2>
+                <p><?php echo htmlspecialchars($house['description']); ?></p>
+                <p>Location: <?php echo htmlspecialchars($house['location']); ?></p>
             </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
 
 </main>
 
