@@ -26,7 +26,7 @@ $news = $news1->getNews();
             <a href="index.php" class="header0">Delandra Estates</a>
             <a href="index.php" class="header1">Home</a>
             <a href="BuyPage.php" class="header1">Buy / Rent</a>
-            <a href="contact us.html" class="header1">Contact</a>
+            <a href="contact us.php" class="header1">Contact</a>
             <a href="about us.php" class="header1">Agents</a>
  
     <?php

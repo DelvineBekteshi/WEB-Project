@@ -1,24 +1,23 @@
 <?php 
-if(!isset($_SESSION)){
+if (!isset($_SESSION)) {
     session_start();
 }
 
 require_once('contactusCRUD.php');
 
-if( $_SERVER["REQUEST_METHOD"]=="POST"){
-if(!empty($_POST['emri'])&&!empty($_POST['email'])&&!empty($_POST['msg'])&& isset($_POST['dergoMSG'])){
-    $cuCRUD= new contactusCRUD();
-    $cuCRUD->setEmri($_POST['emri']);
-    $cuCRUD->setEmails($_POST['email']);
-    $cuCRUD->setMsg($_POST['msg']);
-    $cuCRUD->handleFileUpload();
-    $cuCRUD->insertoMesazhin();
-    header("Location: Dashboard.php");
-    exit;
-} else{
-    echo "<script>alert('Please fill in all the fields and click Send!'); </script>";
-}
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!empty($_POST['emri']) && !empty($_POST['email']) && !empty($_POST['msg'])) {
+        $Con = new contactusCRUD();
+        $Con->setEmri($_POST['emri']);
+        $Con->setEmail($_POST['email']);
+        $Con->setMsg($_POST['msg']);
+        $Con->shtoMesazh();
+        header("Location: contact us.php");
+        exit;
+    } else {
+        echo "<script>alert('Please fill in all fields.');</script>";
+    }
+} 
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,7 +69,7 @@ if(!empty($_POST['emri'])&&!empty($_POST['email'])&&!empty($_POST['msg'])&& isse
                     </div>
                 </div>
                 <div class="contactForm">
-                <form method="POST" action="contactus.php">
+                <form method="POST" action="contact us.php">
 
                         <h2>Send Message</h2>
                         <div class="inputBox">
@@ -95,10 +94,3 @@ if(!empty($_POST['emri'])&&!empty($_POST['email'])&&!empty($_POST['msg'])&& isse
         
     </body>
 </html>
-
-<?php 
-if(isset($_SESSION['mesazhiMeSukses'])){
-unset($_SESSION['mesazhiMeSukses']);
-}
-
-?>
