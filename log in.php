@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="wrapper">
-        <form action="log in.php" method="POST" onsubmit="return validForm();"> 
+        <form action="log in.php" method="POST" action="validoCookie01.php" onsubmit="return validForm();"> 
             <h1>Login</h1>
             <div class="input-box">
                 <input type="email" placeholder="Email" required name="userName" id="username">
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label><input type="checkbox">Remember Me</label> 
                 <a href="#">Forgot Password</a>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" name="submit" class="btn">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="register.php">Register</a></p>
             </div>

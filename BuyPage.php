@@ -79,6 +79,5 @@ $houses = $houseObj->getHouses();
         </div>
     </section>
 </footer>
-
 </body>
 </html>
