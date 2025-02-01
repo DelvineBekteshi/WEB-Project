@@ -19,11 +19,10 @@ $contact= new contactusCRUD($connection);
 
 $messages=$contact->getMesazhet();
 
-=======
+
 require_once('Houses.php');
 $houseObj = new Houses();
 $houses = $houseObj->getHouses();
->>>>>>> Stashed changes
 ?>
 <!DOCTYPE html>
     <html>
