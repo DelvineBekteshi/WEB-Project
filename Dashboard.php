@@ -7,17 +7,28 @@ if ($_SESSION['role'] != 'admin') {
     header('Location: log in.php');
     exit();
 }
+
+//
+require_once('database.php');
+require_once('contactusCRUD.php');
+
+$db=new Database();
+$connection=$db->getConnection();
+$contact= new contactusCRUD($connection);
+
+$messages=$contact->getMesazhet();
+
 ?>
-<DOCTYPE html>
+<!DOCTYPE html>
     <html>
         <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="Dashboard.css">
+        <link rel="stylesheet" type="text/css" href="Dashboard.css?v=2">
         </head>
         <body>
             <div class="header"> 
             <a href="home page.php"><h2>Delandra Estates</h2></a>
-            <h4>Users name</h4>
+            <h4>Dashboard</h4>
         </div>
 
         <div class="Customise">
@@ -54,21 +65,24 @@ if ($_SESSION['role'] != 'admin') {
             <div class="stat-box1">
             <a href="ShtoShtepi.php"><p>Add Products</p></a> 
             </div>
-            </div>
-            <div class="kolona2">
-            <div class="stat-box1">
-              <a href=""><p>Add Agents</p></a>  
-            </div>
-            <div class="stat-box1">
-               <a href="contact us.php"><p id="koment">Contact</p></a> 
-            </div>
+            </div>  
         </div>
-        </div>
-       </div>
-        </div>
-       <div class="Contactmessages", id="1">
+       <div class="Contactmessages" id="1">
             <h3>New messages</h3>
-            <textarea name="comments" cols="30" rows="4"></textarea>
+            <div class="new">
+                <?php 
+                if(count($messages)>0):?>
+                   <?php foreach($messages as $message): ?>
+                 <p><strong>Name:</strong><?= htmlspecialchars($message['emri'])?><br>
+                    <strong>Email:</strong><?= htmlspecialchars($message['email'])?><br>
+                    <strong>Message:</strong><?= nl2br(htmlspecialchars($message['msg']))?></p>
+                    <hr>
+                    <?php endforeach;?>
+                    <?php else: ?>
+                        <p>No messages yet</p>
+                        <?php endif;?>
+            </div>
+            <textarea name="comments" cols="50" rows="6"></textarea>
         </div>
         
         <div class="DetajetCustomer", id="1">

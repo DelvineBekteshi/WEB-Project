@@ -86,20 +86,20 @@ body{
      display: flex;
      justify-content: center;
      align-items: center;
-     width: 400px;
-     height: 200px;
+     width: 600px;
+     height: 600px;
      flex-direction: column;
      gap: 10px;
-     margin-left: 1050px;
+     margin-left: 600px;
      padding: 30px;
      background:white;
      border: 1px;
      border-radius: 9px; 
      margin-top: 80px;
 }
-.Contactmessages textarea {
-    width: 300px;
-    height: 100px;
+.Contactmessages new {
+    width: 500px;
+    height: 150px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
