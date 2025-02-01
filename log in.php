@@ -5,6 +5,7 @@ if (!isset($_SESSION)) {
 
 include_once 'database.php';
 include_once 'useri.php';
+include_once 'validoCookie01.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = new Database();
@@ -45,18 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="wrapper">
-        <form action="log in.php" method="POST" action="validoCookie01.php" onsubmit="return validForm();"> 
+        <form action="log in.php" method="POST" onsubmit="return validForm();"> 
             <h1>Login</h1>
             <div class="input-box">
-                <input type="email" placeholder="Email" required name="userName" id="username">
+                <input type="email" placeholder="Email" required name="userName" id="username"
+                value="<?php if(isset($_COOKIE['userName']))echo $_COOKIE['userName']; ?>">
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required name="password" id="password">
+                <input type="password" placeholder="Password" required name="password" id="password"
+                value="<?php if(isset($_COOKIE['password']))echo $_COOKIE['password']; ?>">
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forgot">
-                <label><input type="checkbox">Remember Me</label> 
+                <label><input type="checkbox" name="remember" <?php if(isset($_COOKIE['userName'])) echo "checked";?>>Remember Me</label> 
                 <a href="#">Forgot Password</a>
             </div>
             <button type="submit" name="submit" class="btn">Login</button>
