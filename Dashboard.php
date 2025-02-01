@@ -28,12 +28,12 @@ $houses = $houseObj->getHouses();
     <html>
         <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="Dashboard.css?v=2">
+        <link rel="stylesheet" type="text/css" href="Dashboard.css">
         </head>
         <body>
             <div class="header"> 
             <a href="home page.php"><h2>Delandra Estates</h2></a>
-            <h4>Dashboard</h4>
+             
         </div>
 
         <div class="Customise">

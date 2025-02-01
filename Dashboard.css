@@ -85,42 +85,22 @@ body {
     list-style: none;
     margin-bottom: 9px;
 } 
-.Contactmessages{
+ .Contactmessages {
     color: #0C192C;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 600px;
-     height: 600px;
-     flex-direction: column;
-     gap: 10px;
-     margin-left: 600px;
-     padding: 30px;
-     background:white;
-     border: 1px;
-     border-radius: 9px; 
-     margin-top: 80px;
-}
-.Contactmessages new {
-    width: 500px;
-    height: 150px;
-}
-
-.Contactmessages {
-    color: #0C192C;
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 400px;
     flex-direction: column;
     gap: 10px;
-    margin-left: 950px;
+    margin-left: 1230px;
     padding: 30px;
     background: white;
     border: 1px;
     border-radius: 9px;
-    margin-top: 30px;
+    margin-top: -55px;
 }
 
 .Contactmessages textarea {
@@ -143,11 +123,12 @@ body {
 }
 
 .Statistikat {
+    position:relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -390px;
-    margin-left: 200px;
+    margin-top: -460px;
+    margin-left: 285px;
     width: 80%;
 }
 
@@ -160,22 +141,23 @@ body {
     height: 60px;
 }
 
-.DetajetCustomer {    
+.DetajetCustomer {   
+    position:relative; 
     display: flex;  
     flex-direction: column;  
     justify-content: center;
     align-items: center;
     
     width: 40%;  
-    height: 400px; 
+    height: 365px; 
     padding: 10px;  
     
     background-color: white;  
     border-radius: 9px;  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
     overflow-y: auto;  
-    margin-left: 220px;
-    margin-top: -260px;
+    margin-left: 285px;
+    margin-top: -390px;
 }
 
 .DetajetCustomer textarea {
