@@ -11,29 +11,55 @@ class Houses extends Database {
     private $description;
     private $location;
     private $image_url;
+    private $email;
     private $conn;
 
-    public function __construct($id='', $title='', $description='', $location='', $image_url=''){
+    public function __construct($id='', $title='', $description='', $location='', $image_url='', $email=''){
         parent::__construct();
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
         $this->location = $location;
         $this->image_url = $image_url;
+        $this->email= $email;
         $this->conn = $this->getConnection();
     }
 
-    public function getId(){ return $this->id; }
-    public function getTitle(){ return $this->title; }
-    public function getDescription(){ return $this->description; }
-    public function getLocation(){ return $this->location; }
-    public function getImage_url(){ return $this->image_url; }
+    public function getId(){
+         return $this->id; 
+    }
+    public function getTitle(){
+         return $this->title;
+         }
+    public function getDescription(){ 
+        return $this->description;
+     }
+    public function getLocation(){ 
+        return $this->location;
+     }
+    public function getImage_url(){ 
+        return $this->image_url;
+     }
+    public function getEmail(){
+        return $this->email; 
+    }
 
-    public function setTitle($title){ $this->title = $title; }
-    public function setDescription($description){ $this->description = $description; }
-    public function setLocation($location){ $this->location = $location; }
-    public function setImage_url($image_url){ $this->image_url = $image_url; }
-    
+    public function setTitle($title){ 
+        $this->title = $title;
+     }
+    public function setDescription($description){ 
+        $this->description = $description;
+     }
+    public function setLocation($location){ 
+        $this->location = $location;
+     }
+    public function setImage_url($image_url){ 
+        $this->image_url = $image_url; 
+    }
+    public function setEmail($email){
+        $this->email=$email; 
+    }
+
     public function handleFileUpload() {
         if (isset($_FILES['fotoShtepise']) && $_FILES['fotoShtepise']['error'] === 0) {
             $foto = $_FILES['fotoShtepise'];
@@ -57,12 +83,13 @@ class Houses extends Database {
     
     public function shtoShtepine() {
         try {
-            $sql = "INSERT INTO `houses`(`title`, `description`, `location`, `image_url`) VALUES (:title, :description, :location, :image_url)";
+            $sql = "INSERT INTO `houses`(`title`, `description`, `location`, `image_url`, `email`) VALUES (:title, :description, :location, :image_url, :email)";
             $stm = $this->conn->prepare($sql);
             $stm->bindParam(':title', $this->title);
             $stm->bindParam(':description', $this->description);
             $stm->bindParam(':location', $this->location);
             $stm->bindParam(':image_url', $this->image_url);
+            $stm->bindParam(':email', $this->email);
             $stm->execute();
             $_SESSION['ProduktiUShtuaMeSukses'] = true;
         } catch (Exception $e) {

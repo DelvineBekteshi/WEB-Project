@@ -8,7 +8,8 @@ if ($_SESSION['role'] != 'admin') {
     exit();
 }
 
-//
+
+
 require_once('database.php');
 require_once('contactusCRUD.php');
 
@@ -18,6 +19,11 @@ $contact= new contactusCRUD($connection);
 
 $messages=$contact->getMesazhet();
 
+=======
+require_once('Houses.php');
+$houseObj = new Houses();
+$houses = $houseObj->getHouses();
+>>>>>>> Stashed changes
 ?>
 <!DOCTYPE html>
     <html>
@@ -65,7 +71,18 @@ $messages=$contact->getMesazhet();
             <div class="stat-box1">
             <a href="ShtoShtepi.php"><p>Add Products</p></a> 
             </div>
+
             </div>  
+
+            </div>
+            <div class="kolona2">
+            <div class="stat-box1">
+              <a href="about us.php"><p>Agents</p></a>  
+            </div>
+            <div class="stat-box1">
+               <a href="contact us.php"><p id="koment">Contact</p></a> 
+            </div>
+
         </div>
        <div class="Contactmessages" id="1">
             <h3>New messages</h3>
@@ -85,15 +102,14 @@ $messages=$contact->getMesazhet();
             <textarea name="comments" cols="50" rows="6"></textarea>
         </div>
         
-        <div class="DetajetCustomer", id="1">
-            <h3>Customer Details</h3>
-            <ul>
-                <li>Name:     | Price:     | Payment: Paid</li>
-                <li>Name:     | Price:     | Payment: Paid</li>
-                <li>Name:     | Price:     | Payment: Paid</li>
-                <li>Name:     | Price:     | Payment: Paid</li>
-                <li>Name:     | Price:     | Payment: Paid</li>
-            </ul>
+        <div class="DetajetCustomer" id="1">
+            <h3 id='cDetails'>Product Details</h3>
+            <textarea name="comments" cols="40" rows="12" id='cDetails'>
+    <?php foreach ($houses as $house): ?>
+        <?php echo htmlspecialchars($house['email']) . ' added '; ?>
+    <?php endforeach; ?>
+</textarea>
+
         </div>
     
         </body>

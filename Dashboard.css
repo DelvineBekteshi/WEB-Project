@@ -1,33 +1,34 @@
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
-body{
-   background-color: #0C192C; 
+
+body {
+    background-color: #0C192C;
 }
-.header{
+
+.header {
     padding: 5px 40px;
     color: white;
-    justify-content: space-between; 
+    justify-content: space-between;
     display: flex;
 }
-.Customise{
+
+.Customise {
     display: flex;
-    justify-content: flex-start;  
-    align-items: center; 
+    justify-content: flex-start;
+    align-items: center;
     color: #0C192C;
     gap: 10px;
     margin-left: 10px;
     margin-right: 10px;
     padding: 0.1px;
-    background:white;
+    background: white;
     border: 1px;
     border-radius: 9px;
-     
-    
 }
- 
-.Navigation{
+
+.Navigation {
     display: flex;
     padding: 5px 40px;
     color: rgb(4, 0, 0);
@@ -41,19 +42,21 @@ body{
     background: white;
     border: 1px;
     border-radius: 9px;
-
 }
+
 .Navigation ul {
-    padding-left: 0;         
-    margin: 0;  
+    padding-left: 0;
+    margin: 0;
     text-align: center;
 }
-.Navigation li{
+
+.Navigation li {
     color: #293950;
     list-style: none;
     margin-bottom: 9px;
 }
-.Navigation2{
+
+.Navigation2 {
     display: flex;
     padding: 5px 40px;
     color: rgb(4, 0, 0);
@@ -69,17 +72,19 @@ body{
     border-radius: 9px;
     justify-content: center;
     align-items: center;
-
 }
+
 .Navigation2 ul {
-    padding-left: 0;         
-    margin: 0;  
+    padding-left: 0;
+    margin: 0;
     text-align: center;
 }
-.Navigation2 li{
+
+.Navigation2 li {
     color: #293950;
     list-style: none;
     margin-bottom: 9px;
+<<<<<<< Updated upstream
 } 
 .Contactmessages{
     color: #0C192C;
@@ -100,90 +105,116 @@ body{
 .Contactmessages new {
     width: 500px;
     height: 150px;
+=======
+}
+
+.Contactmessages {
+    color: #0C192C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 1050px;
+    padding: 30px;
+    background: white;
+    border: 1px;
+    border-radius: 9px;
+    margin-top: 80px;
+}
+
+.Contactmessages textarea {
+    width: 300px;
+    height: 100px;
+>>>>>>> Stashed changes
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  } 
+}
 
-  .Nav{
+.Nav {
     width: 100%;
-  }
- .kolona1, .kolona2{
+}
+
+.kolona1, .kolona2 {
     display: flex;
     flex-direction: row;
     width: 50%;
- }
-  .Statistikat{
+}
+
+.Statistikat {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: -390px;
     margin-left: 200px;
     width: 80%;
- }
- .Statistikat .stat-box1{ 
+}
+
+.Statistikat .stat-box1 {
     text-align: center;
     background: white;
     border-radius: 5px;
     margin-left: 50px;
-    width: 300px ;
+    width: 300px;
     height: 60px;
- }
+}
 
-
-
- .DetajetCustomer{    
-   display: flex;  
+.DetajetCustomer {    
+    display: flex;  
     flex-direction: column;  
-    justify-content: center; 
-    align-items: center; 
+    justify-content: flex-start;
+    align-items: flex-start;
     
-    width: 53%;  
-    
-    height: 34%;  
+    width: 40%;  
+    height: 400px; 
     padding: 10px;  
     
     background-color: white;  
     border-radius: 9px;  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
-    overflow: visible; 
+    overflow-y: auto;  
     margin-left: 200px;
     margin-top: -260px;
-   
- }
- .DetajetCustomer h3{
-    margin-left: 20px;
- }
- .DetajetCustomer ul{
-    margin-left: 20px;
- }
+}
 
- @media (max-width: 768px){
-    body{
+
+#cDetails{
+    height: 300px;
+}
+
+
+@media (max-width: 768px) {
+    body {
         width: 100%;
     }
-    .kolona1, .kolona2{
+
+    .kolona1, .kolona2 {
         display: flex;
         flex-direction: column;
         margin: 5px;
-
     }
-    .Statistikat{
+
+    .Statistikat {
         display: flex;
         flex-direction: column;
-       margin-top: -500px;
-       margin-left: 150px;
+        margin-top: -500px;
+        margin-left: 150px;
     }
-    .stat-box1{
-        width:50%;
-        margin: 10px;
 
+    .stat-box1 {
+        width: 50%;
+        margin: 10px;
     }
-    #koment{
+
+    #koment {
         margin-right: 15px;
     }
-    .DetajetCustomer{
+
+    .DetajetCustomer {
         width: 90%;
         margin-right: -15px;
         margin: 0px;
@@ -191,46 +222,51 @@ body{
         padding: 20px;
         margin-bottom: 10px;
     }
-    .Contactmessages{
+
+    .Contactmessages {
         padding: 20px;
         margin-bottom: 300px;
         margin-left: 2px;
         margin-top: 200px;
         width: 90%;
     }
-    .Navigation2{
+
+    .Navigation2 {
         height: 200px;
     }
-   
- }
+}
 
- @media (max-width: 480px){
-    .kolona1, .kolona2{
-        flex-direction: column;
-        
-    }
-    .Statistikat{
+@media (max-width: 480px) {
+    .kolona1, .kolona2 {
         flex-direction: column;
     }
-     .Statistikat .stat-box1{
-        width:50%;
+
+    .Statistikat {
+        flex-direction: column;
+    }
+
+    .Statistikat .stat-box1 {
+        width: 50%;
         margin: 10px;
         margin-left: -30px;
     }
-    .DetajetCustomer{
+
+    .DetajetCustomer {
         width: 90%;
         margin-right: -15px;
         margin: 0px;
         margin-top: -260px;
         padding: 20px;
         margin-bottom: 10px;
+        max-height: 300px;  /* Ensure scrolling in smaller screens */
+        overflow-y: auto;   /* Enable vertical scroll */
     }
-    .Contactmessages{
+
+    .Contactmessages {
         padding: 20px;
         margin-bottom: 300px;
         margin-left: 2px;
         margin-top: 120px;
         width: 90%;
     }
-   
- }
+}

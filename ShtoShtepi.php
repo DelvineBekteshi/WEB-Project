@@ -5,12 +5,13 @@ if (!isset($_SESSION)) {
 require_once('Houses.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['location']) && isset($_FILES['fotoShtepise'])) {
+    if (!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['location']) && isset($_FILES['fotoShtepise']) && !empty($_POST['email'])) {
         $house = new Houses();
         $house->setTitle($_POST['title']);
         $house->setDescription($_POST['description']);
         $house->setLocation($_POST['location']);
         $house->setImage_url($_FILES['fotoShtepise']['name']);
+        $house->setEmail($_POST['email']);
         $house->handleFileUpload();
         $house->shtoShtepine();
         header("Location: ShtoShtepi.php");
@@ -34,6 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Add New House</h1>
         <form action="ShtoShtepi.php" method="POST" enctype="multipart/form-data">
             
+            <div class="input-box">
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+
             <div class="input-box">
                 <input type="text" id="title" name="title" placeholder="House Title" required>
             </div>
