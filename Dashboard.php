@@ -74,13 +74,7 @@ $houses = $houseObj->getHouses();
             </div>  
 
             </div>
-            <div class="kolona2">
-            <div class="stat-box1">
-              <a href="about us.php"><p>Agents</p></a>  
-            </div>
-            <div class="stat-box1">
-               <a href="contact us.php"><p id="koment">Contact</p></a> 
-            </div>
+            
 
         </div>
        <div class="Contactmessages" id="1">
