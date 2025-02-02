@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .btn{background-color: #0C192C;}
     </style>
     <title>Register Form</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../CSS/register.css">
 </head> 
 <body>
     <div class="wrapper">

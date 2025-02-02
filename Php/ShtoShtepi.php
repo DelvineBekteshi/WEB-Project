@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title id="mainTitle">Add New House</title>
-    <link rel="stylesheet" href="ShtoShtepi.css">
+    <link rel="stylesheet" href="../CSS/ShtoShtepi.css">
 </head>
 <body>
 

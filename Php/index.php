@@ -16,8 +16,8 @@ $news = $news1->getNews();
 <html>
     <head>
         <title>Delandra Estate</title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="icon" href=".../Fotot/favicon-16x16.png" type="image/x-icon">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
@@ -46,28 +46,28 @@ if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
 
                 <selection class="slides">
                     <div class="slide" id="lastImageDuplicate">
-                        <img src="f9.jpg" alt="">
+                        <img src="../Fotot/f9.jpg" alt="">
                         </div>
                     <div class="slide">
-                    <img src="background4.png" alt="House with greenery">
+                    <img src="../Fotot/background4.png" alt="House with greenery">
                     </div>
                     <div class="slide"> 
-                    <img src="f4.jpg" alt="">
+                    <img src="../Fotot/f4.jpg" alt="">
                     </div>
                     <div class="slide">
-                    <img src="f8.jpg" alt="">
+                    <img src="../Fotot/f8.jpg" alt="">
                     </div>
                     <div class="slide">
-                    <img src="f9.jpg" alt="">
+                    <img src="../Fotot/f9.jpg" alt="">
                     </div>
                     <div class="slide" id="firstImageDuplicate">
-                        <img src="background4.png" alt="House with greenery">
+                        <img src="../Fotot/background4.png" alt="House with greenery">
                         </div>
 
                 </selection>
                 <div class="overlay-content">
                   <h1>Find a place where you<br>can be yourself</h1>
-                  <button class="cta-button" onclick="window.location.href='contact us.html';">Book a call</button>
+                  <button class="cta-button" onclick="window.location.href='contact us.php';">Book a call</button>
 
                 </div>
                 <selection class="dots">
@@ -201,7 +201,7 @@ if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
                 <div class="News">
             <a href=""><p class="NewsTitle"><b><?php echo htmlspecialchars($new['title']); ?></b></p></a>
             <div class="newsCon">
-                <img src="<?php echo htmlspecialchars($new['img']); ?>" alt="News1" class="image">
+                <img src="<?php echo '../Fotot/'.htmlspecialchars($new['img']); ?>" alt="News1" class="image">
                 <div class="NewsDesc">
                     <p><?php echo htmlspecialchars($new['description']); ?></p>
                 </div>
@@ -225,7 +225,7 @@ if (isset($_SESSION['id']) && $_SESSION['role']=='admin') {
             <li><a href="logout.php">Log out</a></li>
             <li><a href="index.php">Home</a></li> 
             <li><a href="about us.php">About </a></li>
-            <li><a href="contact us.html">Contact</a></li>
+            <li><a href="contact us.php">Contact</a></li>
         </ul>
     </div>
     <div class="footer-socials">

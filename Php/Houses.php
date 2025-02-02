@@ -73,7 +73,7 @@ class Houses extends Database {
 
             if (in_array($formatiIFotosPerKontrollim, $teLejuara)) {
                 $emriUnikFotos = uniqid('', true) . "." . $formatiIFotosPerKontrollim;
-                $destinacioniFotos = 'WEB-Project/' . $emriUnikFotos;
+                $destinacioniFotos = '../Fotot/' . $emriUnikFotos;
                 if (move_uploaded_file($emeriTempIFotes, $destinacioniFotos)) {
                     $this->setImage_url($destinacioniFotos);
                 }

@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .btn{background-color: #0C192C;}
     </style>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="log in.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/log in.css">
 </head>
 <body>
     <div class="wrapper">

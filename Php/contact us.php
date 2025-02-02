@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
     <head>
         <title>Contact us</title>
-        <link rel="stylesheet" href="contact us.css">
+        <link rel="stylesheet" href="../CSS/contact us.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <style>
             .contact .content {

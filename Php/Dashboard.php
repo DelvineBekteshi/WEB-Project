@@ -28,11 +28,11 @@ $houses = $houseObj->getHouses();
     <html>
         <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="Dashboard.css?v=2">
+        <link rel="stylesheet" type="text/css" href="../CSS/Dashboard.css?v=2">
         </head>
         <body>
             <div class="header"> 
-            <a href="home page.php"><h2>Delandra Estates</h2></a>
+            <a href="index.php"><h2>Delandra Estates</h2></a>
             <h4>Dashboard</h4>
         </div>
 
@@ -54,9 +54,9 @@ $houses = $houseObj->getHouses();
         <div class="Navigation2">
             <h3>Agents</h3>
             <ul>
-                <li><a href="about us.html">Arwen Dais</a></li>
-                <li><a href="about us.html">Lyra Winslow</a></li>
-                <li><a href="about us.html">Noelle Zeph</a></li>
+                <li><a href="about us.php">Arwen Dais</a></li>
+                <li><a href="about us.php">Lyra Winslow</a></li>
+                <li><a href="about us.php">Noelle Zeph</a></li>
             </ul>
         </div>
 

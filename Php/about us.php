@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 <html>
     <head>
         <title>About Us</title>
-        <link rel="stylesheet" href="about us.css">
+        <link rel="stylesheet" href="../CSS/about us.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
@@ -16,8 +16,8 @@ if (!isset($_SESSION)) {
             <i class='bx bxs-home-heart' style='color:#ffffff'  ></i>
             <a href="index.php" class="header0">Delandra Estates</a>
             <a href="index.php" class="header1">Home</a>
-            <a href="BuyPage.html" class="header1">Buy / Rent</a>
-            <a href="contact us.html" class="header1">Contact</a>
+            <a href="BuyPage.php" class="header1">Buy / Rent</a>
+            <a href="contact us.php" class="header1">Contact</a>
             <a href="about us.php" class="header1">Agents</a>
             <a href="log in.php" class="header2">Log In/Register</a>
         </header>
@@ -30,7 +30,7 @@ if (!isset($_SESSION)) {
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="agent1.avif" alt="Arwen"  class="Agents">
+                    <img src="../Fotot/agent1.avif" alt="Arwen"  class="Agents">
                     <div class="container">
                         <h2>Arwen Damaris</h2>
                         <p class="title">CEO & Founder</p>
@@ -43,7 +43,7 @@ if (!isset($_SESSION)) {
 
             <div class="colum">
                 <div class="card">
-                    <img src="agent2.avif" alt="Lyra" class="Agents">
+                    <img src="../Fotot/agent2.avif" alt="Lyra" class="Agents">
                     <div class="container">
                         <h2>Lyra Winslow</h2>
                         <p class="title">Art Director</p>
@@ -58,7 +58,7 @@ if (!isset($_SESSION)) {
 
             <div class="column">
                 <div class="card">
-                    <img src="agent3.jpg" alt="Noelle" class="Agents">
+                    <img src="../Fotot/agent3.jpg" alt="Noelle" class="Agents">
                     <div class="container">
                         <h2>Noelle Zephyrine</h2>
                         <p class="title">Designer</p>
@@ -85,7 +85,7 @@ if (!isset($_SESSION)) {
                     <ul>
                         <li><a href="index.php">Home</a></li> 
                         <li><a href="about us.php">About</a></li>
-                        <li><a href="contact us.html">Contact</a></li>
+                        <li><a href="contact us.php">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-socials">
