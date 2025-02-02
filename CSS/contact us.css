@@ -62,12 +62,12 @@ header{
 .contact .content h2{
     font-size: 37px;
     font-weight: 500;
-    color: white;
+    color: black;
 }
 .contact .content p{
      
     font-weight: 300;
-    color: white;
+    color: black;
 }
 .container{
     width: 100%;

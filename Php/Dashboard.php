@@ -34,6 +34,13 @@ $houses = $houseObj->getHouses();
             <div class="header"> 
             <a href="index.php"><h2>Delandra Estates</h2></a>
             <h4>Dashboard</h4>
+
+        <link rel="stylesheet" type="text/css" href="Dashboard.css">
+        </head>
+        <body>
+            <div class="header"> 
+            <a href="home page.php"><h2>Delandra Estates</h2></a>
+             
         </div>
 
         <div class="Customise">
