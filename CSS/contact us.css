@@ -5,45 +5,6 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    background-color: #0C192C;
-    padding: 5px 40px;
-    color: black;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    
- }
- 
- .header0 {
-    font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
-    margin-right: 20px;
-    margin-left: 5px;
-    justify-content: space-between;
- }
- .icon{
-     
-    height: 32px;
-    width: 32px;
-    border-radius: 80px;
-}
-
-.header1{
-   font-size: 15px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: black;
-   padding-inline: 3px;
-   margin-right: 5px;
-}
-
-.header2{
-   font-size: 15px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   margin-left: auto;
-   color: black;
-}
 .contact{
     position:relative;
     min-height:100vh;
@@ -52,8 +13,12 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-     background: rgb(121, 165, 230);
+     background: rgb(181, 201, 230);
      background-size: cover;
+}
+.contact .contactForm{
+    
+    color:#0C192C;
 }
 .contact .content{
     max-width: 800px;
@@ -89,7 +54,7 @@ header{
 .container .contactInfo .box .icon{
     min-width: 60px;
     height: 60px;
-    background: rgb(121, 165, 230);
+    background: rgb(185, 200, 223) ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,3 +143,14 @@ header{
         width: 100%;
     }
  }
+ .back-home {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+    background: red;
+    color: white;
+    padding: 10px;
+}

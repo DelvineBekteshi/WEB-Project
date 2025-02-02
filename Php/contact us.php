@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </style>
     </head>
     <body>
-    <a href="index.php">Go back to <b>Home Page</b></a> 
-        <selection class="contact">
-            <div class="content">
+     
+        <selection class="contact"> 
+            <div class="content"> 
                 <h2>Contact Us</h2>
                 <p>Ask us about your future home!</p>
 
@@ -92,6 +92,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
         </selection>
+        <div class="back-home">
+            <a href="index.php">Go back to <b>Home Page</b></a>
         
     </body>
 </html>
