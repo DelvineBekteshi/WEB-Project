@@ -11,40 +11,26 @@ if ($_SESSION['role'] != 'admin') {
 
 
 require_once('database.php');
-require_once('contactusCRUD.php');
+require_once('Houses.php');
 
 $db=new Database();
 $connection=$db->getConnection();
-$contact= new contactusCRUD($connection);
+$House= new Houses($connection);
 
-$messages=$contact->getMesazhet();
+$all=$House->getHouses();
 
-
-require_once('Houses.php');
-$houseObj = new Houses();
-$houses = $houseObj->getHouses();
 ?>
 <!DOCTYPE html>
     <html>
         <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="../CSS/Dashboard.css?v=2">
+        <link rel="stylesheet" type="text/css" href="../CSS/Dashboard.css">
         </head>
         <body>
             <div class="header"> 
             <a href="index.php"><h2>Delandra Estates</h2></a>
-            <h4>Dashboard</h4>
-
-        <link rel="stylesheet" type="text/css" href="Dashboard.css">
-        </head>
-        <body>
-            <div class="header"> 
-            <a href="home page.php"><h2>Delandra Estates</h2></a>
-             
-        </div>
-
-        <div class="Customise">
-           <h4>Dashboard</h4>
+            <h4 id="dash">Dashboard</h4>
+       
         </div>
 
         <div class="Nav">
@@ -84,32 +70,26 @@ $houses = $houseObj->getHouses();
             
 
         </div>
-       <div class="Contactmessages" id="1">
-            <h3>New messages</h3>
-            <div class="new">
-                <?php 
-                if(count($messages)>0):?>
-                   <?php foreach($messages as $message): ?>
-                 <p><strong>Name:</strong><?= htmlspecialchars($message['emri'])?><br>
-                    <strong>Email:</strong><?= htmlspecialchars($message['email'])?><br>
-                    <strong>Message:</strong><?= nl2br(htmlspecialchars($message['msg']))?></p>
-                    <hr>
-                    <?php endforeach;?>
-                    <?php else: ?>
-                        <p>No messages yet</p>
-                        <?php endif;?>
-            </div>
-            <textarea name="comments" cols="50" rows="6"></textarea>
-        </div>
+      
+        <div id="crud">
+        <table> 
+            <p>Houses</p>
+            <tr>
+                <th>Email</th>
+                <th>Title</th>
+            </tr>
+            
+<?php foreach($all as $key => $value){ ?>
+    <tr>
+    <td><?php echo $value['email']?></td>
+    <td><?php echo $value['title']?></td>
+    <td id='de'><a href="deleteHouse.php?id=<?php echo $value['id'] ?>"><button id='d'>Delete</button></a>
+    <a href="editHouse.php?id=<?php echo $value['id'] ?>"><button id='e'>Edit</button></a>
+</td>
+            </tr>
+            <?php }?>
+        </table>
         
-        <div class="DetajetCustomer" id="1">
-            <h3 id='cDetails'>Product Details</h3>
-            <textarea name="comments" cols="40" rows="12" id='cDetails'>
-    <?php foreach ($houses as $house): ?>
-        <?php echo htmlspecialchars($house['email']) . ' added '; ?>
-    <?php endforeach; ?>
-</textarea>
-
         </div>
     
         </body>
