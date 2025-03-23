@@ -107,6 +107,21 @@ class Houses extends Database {
             return [];
         }
     }
-}
+
+    public function deleteShtepi($id){
+        $sql='delete from houses where id= :id';
+        $stm = $this->conn->prepare($sql);
+        $stm->bindParam(':id', $id);
+        $stm->execute();
+        if($stm==true){
+            echo "<script>alert('Product was sucessfully deleted')</script>";
+        }
+        else{
+            return false;
+        }
+
+        }
+    }
+
 
 ?>

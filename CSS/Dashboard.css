@@ -1,22 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 a {
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 
 body {
-    background-color: #0C192C;
+    background-color: #1d2a3a; /* Dark background like login page */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.header {
+/* Header */
+header {
+    background-color: #0C192C;
     padding: 5px 40px;
     color: white;
     justify-content: space-between;
+    align-items: center;
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#dash{
-    background-color: white;
-    width: 100px;
+.header h2 {
+    margin-bottom: 5px;
 }
 
+#dash {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Navigation Sidebar */
+.Nav {
+    display: flex;
+    margin-top: 30px;
+    width: 80%;
+    gap: 30px;
+    justify-content: center; /* Align items in the center */
+    flex-wrap: wrap;
+}
+
+.Navigation, .Navigation2 {
+    background-color: #fff;
+    color: #000;
+    padding: 15px;  /* Reduced padding for smaller height */
+    border-radius: 15px;
+    width: 220px;
+    transition: width 0.3s ease;
+    max-height: 400px; /* Set a maximum height for the navigation */
+    overflow-y: auto;  /* Allows scrolling if content overflows */
+    box-sizing: border-box;
+}
+
+.Navigation h3, .Navigation2 h3 {
+    margin-bottom: 15px;
+}
+
+.Navigation ul, .Navigation2 ul {
+    list-style: none;
+}
+
+.Navigation li, .Navigation2 li {
+    margin: 10px 0;
+}
+
+.Navigation a, .Navigation2 a {
+    text-decoration: none;
+    color: #1d2a3a;
+}
+
+.Navigation a:hover, .Navigation2 a:hover {
+    text-decoration: underline;
+}
+
+/* Middle Section */
+.part3 {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+.Statistikat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kolona1 {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-box1 {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    color: #1d2a3a;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-box1:hover {
+    transform: scale(1.05);
+}
+
+.stat-box1 a {
+    text-decoration: none;
+    color: #1d2a3a;
+    font-weight: bold;
+}
+
+/* CRUD Section */
+#crud {
+    margin-top: 50px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    color: #1d2a3a;
+    text-align: center;
+}
+
+#crud p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #1d2a3a;
+    color: #fff;
+}
+
+#de button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+}
+
+#d {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#e {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#de button:hover {
+    opacity: 0.85;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    /* Tablet Mode */
+    .Nav {
+        flex-direction: column;  /* Stack navigation vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .Navigation, .Navigation2 {
+        width: 90%;  /* Make navigation take full width on smaller screens */
+        margin-bottom: 20px;
+        max-height: 300px; /* Reduce height further on smaller screens */
+    }
+
+    .Statistikat {
+        flex-direction: column;  /* Stack stat boxes on smaller screens */
+        gap: 10px;
+    }
+
+    .kolona1 {
+        flex-direction: column;  /* Stack stat boxes vertically */
+        gap: 10px;
+    }
+
+    .stat-box1 {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* iPhone and smaller screens */
+    .Nav {
+        flex-direction: column;  /* Stack navigation vertically */
+        width: 100%;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .Navigation, .Navigation2 {
+        width: 100%;  /* Full-width navigation */
+        margin-bottom: 15px;
+        max-height: 250px; /* Reduce height more on small screens */
+    }
+
+    .Statistikat {
+        flex-direction: column;  /* Stack stat boxes */
+        gap: 15px;
+    }
+
+    .kolona1 {
+        flex-direction: column;  /* Stack stat boxes vertically */
+        gap: 15px;
+    }
+
+    .stat-box1 {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #crud {
+        width: 90%;  /* Make CRUD section take most of the screen on small devices */
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.7rem;  /* Reduce font size of table */
+    }
+    #de button {
+        width: 70px;  /* Adjust button width for small screens */
+        font-size: 0.8rem;
+    }
+}
 
