@@ -121,7 +121,15 @@ class Houses extends Database {
         }
 
         }
+   
+
+    public function lexoShtepiSipasID($id) {
+        $sql = 'SELECT * FROM houses WHERE id = :id';
+        $stm = $this->conn->prepare($sql);
+        $stm->execute([':id' => $id]);
+        $rezultati = $stm->fetch(PDO::FETCH_ASSOC);
+        return $rezultati;
     }
-
-
+    
+ }
 ?>
